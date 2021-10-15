@@ -31,13 +31,14 @@ export default function Home({ data }) {
 }
 
 
+import { benben } from '../benben'
 export const getStaticProps = async () => {
-  const res = await fetch(`${BASE_URL}/api/benben`)
-  const data = await res.json()
+  // const res = await fetch(`${BASE_URL}/api/benben`)
+  // const data = await res.json()
 
   return {
     props: {
-      data
+      data: benben
     }
   }
 }
