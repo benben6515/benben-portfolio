@@ -137,6 +137,7 @@ const InformationWrapper = styled.div`
 const Information = styled.div`
   display: flex;
   flex-flow: column wrap;
+  align-items: flex-start;
   flex: 360px;
   max-width: 500px;
   gap: 1rem;
@@ -193,7 +194,7 @@ const ProjectLinks = styled.div`
 
 const Profile = ({ data }) => {
   const { skills, projects } = data
-  const { zAxis } = projects
+  const { zAxis, portfolio } = projects
 
   return (
     <PageWrapper>
@@ -207,16 +208,16 @@ const Profile = ({ data }) => {
             </a>
           </IconItem>
         </Link>
-        <a onClick={() => copyToBoard(`${BASE_URL}/resume`)}>
-          <IconItem>
+        <IconItem>
+          <a onClick={() => copyToBoard(`${BASE_URL}/resume`)}>
             <AiOutlineCopy />
-          </IconItem>
-        </a>
-        <a onClick={() => print()}>
-          <IconItem>
+          </a>
+        </IconItem>
+        <IconItem>
+          <a onClick={() => print()}>
             <AiOutlinePrinter />
-          </IconItem>
-        </a>
+          </a>
+        </IconItem>
       </IconWrapper>
 
       <ProfileWrapper>
@@ -337,7 +338,7 @@ const Profile = ({ data }) => {
         <Section>
           <ProjectWrapper>
             <ProjectItem>
-              <SubTitle>{zAxis.name}</SubTitle>
+              <SubTitle>1. {zAxis.name}</SubTitle>
               <ItemWrapper>
                 <ProjectLinks>
                   <a href={zAxis.demo}>
@@ -361,16 +362,26 @@ const Profile = ({ data }) => {
             <img src={zAxis.image} />
           </ProjectWrapper>
           <ProjectWrapper>
-            <Information>
-              <SubTitle>{zAxis.name}</SubTitle>
-              {zAxis.details.map((e) => (
+            <ProjectItem>
+              <SubTitle>2. {portfolio.name}</SubTitle>
+              <ItemWrapper>
+                <ProjectLinks>
+                  <a href={portfolio.demo}>
+                    <ItemName>Demo</ItemName>
+                  </a>
+                  <a href={portfolio.repo}>
+                    <ItemName>Github</ItemName>
+                  </a>
+                </ProjectLinks>
+              </ItemWrapper>
+              {portfolio.details.map((e) => (
                 <ItemWrapper key={e.name}>
                   <ItemName>{e.name}</ItemName>
                   <ItemDescription>{e.description}</ItemDescription>
                 </ItemWrapper>
               ))}
-            </Information>
-            <img src={zAxis.image} />
+            </ProjectItem>
+            <img src={portfolio.image} />
           </ProjectWrapper>
         </Section>
 

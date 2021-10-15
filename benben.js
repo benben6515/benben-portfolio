@@ -157,25 +157,25 @@ export const benben = {
         }
       ]
     },
-    "resume": {
-      "name": "Z-axis",
-      "demo": "https://zaxis.netlify.app/#/",
-      "repo": "https://github.com/angelina524/final-project-Z-axis-frontend/tree/dev",
-      "youtube": "https://www.youtube.com/watch?v=-sDzeKgKeGw",
-      "image": "https://user-images.githubusercontent.com/61361198/136129383-66df350c-7f8a-454e-9f51-dcbe7d916310.gif",
-      "record": "https://hackmd.io/@benben6515/H1-rEQb8_",
+    "portfolio": {
+      "name": "Benben-portfolio",
+      "demo": "https://benben-portfolio.vercel.app/",
+      "repo": "https://github.com/benben6515/benben-portfolio",
+      "youtube": "",
+      "image": "https://i.imgur.com/qqQWjxZ.gif",
+      "record": "",
       "details": [
         {
           "name": "專案說明",
-          "description": "在 Lidemy 學習時的多人協作 Final Project，我們是採用前後端一起開發，每天站會 1 小時，目前開發了約 1.5 個月，我主要負責了首頁視覺元素切板、前後端 Socket.io 整合、後端 AWS EC2/RDS 部署等，期間也學習到了多前後端技術。"
+          "description": "為了記錄個人的作品集，所以自己嘗試了刻一個酷炫的作品集網站，之後作品集也會隨著我一同成長。因為想跟別人不一樣，也順便自己刻一個履歷表，雖是參考 CakeResume 的，但細節上就可以更客製化。"
         },
         {
-          "name": "前端開發",
-          "description": "採用 React、Socket.IO 開發，並部署在 Netlify。"
+          "name": "使用技術",
+          "description": "採用 Next.js, React, @emotion 開發，使用了 SSR 技術，全部的頁面都支援 RWD，也加上了列印功能，履歷內容有調整過，應該沒有被截斷的地方，最後部署在 Vercel 上，也可以打 API 拿到履歷跟作品資料。"
         },
         {
-          "name": "後端開發",
-          "description": "採用 Express、Sequelize、Socket.IO 開發，部署在 AWS EC2 平台，並使用 AWS RDS - MySQL 資料庫。"
+          "name": "開發過程",
+          "description": "從 Lidemy 畢業了，也培養了自學的能力，所以整個專案都是自己去學習並且完成的，體驗到了全部自己來的感覺，真的不容易，感謝 Lidemy 的這段旅程 、感謝 Huli 大大。"
         }
       ]
     }
