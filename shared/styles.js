@@ -58,7 +58,7 @@ export const StyledNavbar = styled.nav`
   width: 100%;
   min-height: 2.5rem;
   display: grid;
-  grid-template-columns: 10rem auto;
+  grid-template-columns: 6rem auto;
   place-items: center center;
   position: absolute;
   top: 0;
