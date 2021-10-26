@@ -90,7 +90,7 @@ const Title = styled.h2`
   color: #48c;
   font-size: 1.6rem;
   border-bottom: 1px solid #48c;
-  margin: 2rem 0;
+  margin: 2rem 0 1.2rem;
   span {
     font-size: 1rem;
   }
@@ -163,7 +163,7 @@ const ItemName = styled.p`
 
 const ItemDescription = styled.p`
   font-size: 0.75rem;
-  color: #666;
+  color: #444;
 `
 
 const ProjectWrapper = styled.div`
@@ -406,6 +406,23 @@ const Profile = ({ data }) => {
                 <ItemDescription>{e.time}</ItemDescription>
               </ItemWrapper>
             ))}
+          </SectionItem>
+        </Section>
+
+        <Title>
+          References<span>（其他參考）</span>
+        </Title>
+        <Section>
+          <SectionItem>
+            <SubTitle>部落格</SubTitle>
+              <ItemWrapper>
+                <ItemName><a href="https://benben6515.github.io/blog/">個人部落格</a></ItemName>
+                <ItemDescription>記錄一些程式筆記、讀書心得的地方。</ItemDescription>
+              </ItemWrapper>
+              <ItemWrapper>
+                <ItemName><a href="https://blog.errorbaker.tw/">共筆技術部落格</a></ItemName>
+                <ItemDescription>跟 Lidemy 學長姐們一起寫的共筆部落格。</ItemDescription>
+              </ItemWrapper>
           </SectionItem>
         </Section>
       </ProfileWrapper>

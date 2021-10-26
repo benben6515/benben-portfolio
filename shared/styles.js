@@ -8,7 +8,7 @@ injectGlobal`
   }
   body {
     font-family: '微軟正黑體';
-    background: url('https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=869&q=80');
+    background: url('https://images.unsplash.com/photo-1626958390898-162d3577f293?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
@@ -63,7 +63,7 @@ export const StyledNavbar = styled.nav`
   position: absolute;
   top: 0;
   left: 0;
-  background: #444;
+  background: #222;
   z-index: 5;
   overflow: hidden;
   img {
@@ -88,6 +88,7 @@ export const StyledNavbar = styled.nav`
 export const FooterWrapper = styled.footer`
   position: relative;
   bottom: 0;
+  color: #eee;
 `
 
 // index
@@ -106,6 +107,7 @@ export const Wrapper = styled.div`
 export const SectionWrapper = styled.div`
   display: grid;
   place-items: center center;
+  min-height: calc(100vh - 2rem);
   gap: 1rem;
   br {
     margin: 2rem 0;
@@ -241,9 +243,20 @@ export const Button = styled.div`
   }
 `
 
+export const AboutMe = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: clamp(320px, 80%, 500px);
+  color: rgba(255, 255, 255, 0.8);
+  margin: 2rem auto 3rem;
+  gap: 1rem;
+  text-shadow: 0 0 5px rgba(255,255,255,0.5);
+`
+
 // projects list page
 export const StyledProjectItem = styled.a`
   width: 300px;
+  margin: 1.5rem;
   border-radius: .8rem .8rem 0 0;
   border-top: 1px solid rgba(255,255,255,0.5);
   box-shadow: 0 25px 25px rgba(0,0,0,0.2), inset 1px 1px 2px rgba(255, 255, 255, 0.2), inset -1px -1px 3px rgba(0,0,0,0.2);

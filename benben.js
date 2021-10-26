@@ -16,7 +16,7 @@ export const benben = {
   ],
   "education": [
     {
-      "name": "程式導師計畫 - 第五期",
+      "name": "Lidemy 程式導師計畫 - 第五期",
       "time": "2021.04 ~ 2021.10"
     },
     {
