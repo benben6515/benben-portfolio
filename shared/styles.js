@@ -27,8 +27,8 @@ injectGlobal`
     bottom: 0;
     left: 50%;
     width: 0;
-    height: 1px;
-    background: #4ac;
+    height: 2px;
+    background: linear-gradient(90deg, #4ac, #4fc);
     transition: .4s;
   }
   a:hover::after {
@@ -251,7 +251,7 @@ export const AboutMe = styled.div`
   margin: 2rem auto 3rem;
   gap: 1rem;
   text-shadow: 0 0 5px rgba(255,255,255,0.5);
-  background: rgba(0, 0, 0, 0.8);
+  background: linear-gradient(45deg, rgba(0,0,10,0.8), rgba(0,50,50,0.8));
   border-radius: .5rem;
   padding: 2rem;
 `

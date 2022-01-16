@@ -158,25 +158,47 @@ export const benben = {
         }
       ]
     },
-    "portfolio": {
-      "name": "Benben-portfolio",
-      "demo": "https://benben-portfolio.vercel.app/",
-      "repo": "https://github.com/benben6515/benben-portfolio",
-      "youtube": "",
-      "image": "https://i.imgur.com/qqQWjxZ.gif",
+    // "portfolio": {
+    //   "name": "Benben-portfolio",
+    //   "demo": "https://benben-portfolio.vercel.app/",
+    //   "repo": "https://github.com/benben6515/benben-portfolio",
+    //   "youtube": "",
+    //   "image": "https://i.imgur.com/qqQWjxZ.gif",
+    //   "record": "",
+    //   "details": [
+    //     {
+    //       "name": "專案說明",
+    //       "description": "為了記錄個人的作品集，所以自己嘗試了刻一個酷炫的作品集網站，之後作品集也會隨著我一同成長。因為想跟別人不一樣，也順便自己刻一個履歷表，雖是參考 CakeResume 的，但細節上就可以更客製化。"
+    //     },
+    //     {
+    //       "name": "使用技術",
+    //       "description": "採用 Next.js, React, @emotion 開發，使用了 SSR 技術，全部的頁面都支援 RWD，也加上了列印功能，履歷內容有調整過，應該沒有被截斷的地方，最後部署在 Vercel 上，也可以打 API 拿到履歷跟作品資料。"
+    //     },
+    //     {
+    //       "name": "開發過程",
+    //       "description": "從 Lidemy 畢業了，也培養了自學的能力，所以整個專案都是自己去學習並且完成的，體驗到了全部自己來的感覺，真的不容易，感謝 Lidemy 的這段旅程 、感謝 Huli 大大。"
+    //     }
+    //   ]
+    // },
+    "gigabyte-industry": {
+      "name": "Gigabyte-industry",
+      "demo": "https://industry.gigabyte.com",
+      "repo": "",
+      "youtube": "https://www.youtube.com/channel/UCM_VXTttz39aJwPM2oBrIzQ",
+      "image": "https://i.imgur.com/K2AGfUP.gif",
       "record": "",
       "details": [
         {
           "name": "專案說明",
-          "description": "為了記錄個人的作品集，所以自己嘗試了刻一個酷炫的作品集網站，之後作品集也會隨著我一同成長。因為想跟別人不一樣，也順便自己刻一個履歷表，雖是參考 CakeResume 的，但細節上就可以更客製化。"
+          "description": "為客戶數位行銷所進行的專案，充滿互動效果，有大量的 3D 模組互動，並擁有中、英雙語系的切換，我負責了整個前端部分。"
         },
         {
           "name": "使用技術",
-          "description": "採用 Next.js, React, @emotion 開發，使用了 SSR 技術，全部的頁面都支援 RWD，也加上了列印功能，履歷內容有調整過，應該沒有被截斷的地方，最後部署在 Vercel 上，也可以打 API 拿到履歷跟作品資料。"
+          "description": "前端的部分採用 Vue, Pug/Sass, Babylon.js（3D framework） 開發，後端則是使用 Laravel ，由後端所建立。"
         },
         {
           "name": "開發過程",
-          "description": "從 Lidemy 畢業了，也培養了自學的能力，所以整個專案都是自己去學習並且完成的，體驗到了全部自己來的感覺，真的不容易，感謝 Lidemy 的這段旅程 、感謝 Huli 大大。"
+          "description": "在王一設計互動任職前端工程師時的專案作品，負責全部的前端開發，期間於 PM、設計師、後端，甚至客戶進行溝通，並解決了新的問題，開發時程約一個月，並進行之後的維護。"
         }
       ]
     }
