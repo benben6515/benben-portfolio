@@ -251,6 +251,8 @@ export const AboutMe = styled.div`
   margin: 2rem auto 3rem;
   gap: 1rem;
   text-shadow: 0 0 5px rgba(255,255,255,0.5);
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: .5rem;
 `
 
 // projects list page

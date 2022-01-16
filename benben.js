@@ -66,13 +66,13 @@ export const benben = {
       },
       {
         "name": "JavaScript 觀念",
-        "description": "了解基楚觀念，如：this, closure, scope, prototype 等"
+        "description": "了解基礎觀念，如：this, closure, scope, prototype 等"
       },
     ],
     "Framework": [
       {
         "name": "React",
-        "description": "悉熟 React library 與 React 生態系的常用工具"
+        "description": "熟悉 React library 與 React 生態系的常用工具"
       },
       {
         "name": "React router",
@@ -96,8 +96,8 @@ export const benben = {
         "name": "Nginx, PM2",
         "description": "利用 Nginx, PM2 工具來達成反向代理與管理網站"
       },
-
     ],
+
     "Database": [
       {
         "name": "MySQL",
@@ -116,6 +116,7 @@ export const benben = {
         "description": "利用 Sequelize ORM 的模型去操作資料庫"
       },
     ],
+
     "other": [
       {
         "name": "Git",
