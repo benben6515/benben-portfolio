@@ -194,7 +194,7 @@ const ProjectLinks = styled.div`
 
 const Profile = ({ data }) => {
   const { skills, projects } = data
-  const { zAxis, portfolio } = projects
+  const { zAxis, portfolio, gigabyteIndustry } = projects
 
   return (
     <PageWrapper>
