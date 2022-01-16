@@ -336,9 +336,33 @@ const Profile = ({ data }) => {
           Projects<span>（專案）</span>
         </Title>
         <Section>
+
           <ProjectWrapper>
             <ProjectItem>
-              <SubTitle>1. {zAxis.name}</SubTitle>
+              <SubTitle>1. {gigabyteIndustry.name}</SubTitle>
+              <ItemWrapper>
+                <ProjectLinks>
+                  <a href={gigabyteIndustry.demo}>
+                    <ItemName>Demo</ItemName>
+                  </a>
+                  <a href={gigabyteIndustry.youtube}>
+                    <ItemName>Youtube</ItemName>
+                  </a>
+                </ProjectLinks>
+              </ItemWrapper>
+              {gigabyteIndustry.details.map((e) => (
+                <ItemWrapper key={e.name}>
+                  <ItemName>{e.name}</ItemName>
+                  <ItemDescription>{e.description}</ItemDescription>
+                </ItemWrapper>
+              ))}
+            </ProjectItem>
+            <img src={gigabyteIndustry.image} />
+          </ProjectWrapper>
+
+          <ProjectWrapper>
+            <ProjectItem>
+              <SubTitle>2. {zAxis.name}</SubTitle>
               <ItemWrapper>
                 <ProjectLinks>
                   <a href={zAxis.demo}>
@@ -361,28 +385,7 @@ const Profile = ({ data }) => {
             </ProjectItem>
             <img src={zAxis.image} />
           </ProjectWrapper>
-          <ProjectWrapper>
-            <ProjectItem>
-              <SubTitle>2. {portfolio.name}</SubTitle>
-              <ItemWrapper>
-                <ProjectLinks>
-                  <a href={portfolio.demo}>
-                    <ItemName>Demo</ItemName>
-                  </a>
-                  <a href={portfolio.repo}>
-                    <ItemName>Github</ItemName>
-                  </a>
-                </ProjectLinks>
-              </ItemWrapper>
-              {portfolio.details.map((e) => (
-                <ItemWrapper key={e.name}>
-                  <ItemName>{e.name}</ItemName>
-                  <ItemDescription>{e.description}</ItemDescription>
-                </ItemWrapper>
-              ))}
-            </ProjectItem>
-            <img src={portfolio.image} />
-          </ProjectWrapper>
+
         </Section>
 
         <Title>

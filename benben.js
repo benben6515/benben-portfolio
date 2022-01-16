@@ -180,7 +180,7 @@ export const benben = {
     //     }
     //   ]
     // },
-    "gigabyte-industry": {
+    "gigabyteIndustry": {
       "name": "Gigabyte-industry",
       "demo": "https://industry.gigabyte.com",
       "repo": "",

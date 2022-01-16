@@ -333,10 +333,11 @@ export const SingleProjectWrapper = styled.div`
 
 export const LinksWrapper = styled.div`
   display: flex;
-  justify-self: flex-end;
+  justify-self: flex-start;
   gap: 1rem;
   font-weight: bold;
-  margin-right: 1rem;
+  font-size: 1.2rem;
+  margin: 1rem 0rem;
 `
 
 export const StackWrapper = styled.div`
