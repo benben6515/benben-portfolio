@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import Link from "next/link"
-import MyHead from "../components/MyHead"
+import MyHead from "../../components/MyHead"
 import {
   SiJavascript,
   SiCss3,
@@ -22,9 +22,10 @@ import {
   AiOutlineCopy,
   AiOutlinePrinter,
 } from "react-icons/ai"
+import { IoLanguageOutline } from "react-icons/io5"
 
-import { BASE_URL } from "../config"
-import { copyToBoard } from "../helper"
+import { BASE_URL } from "../../config"
+import { copyToBoard } from "../../helper"
 
 const PageWrapper = styled.div`
   width: 100%;
@@ -208,6 +209,11 @@ const Profile = ({ data }) => {
             </a>
           </IconItem>
         </Link>
+        <IconItem>
+          <Link href='./en'>
+            <IoLanguageOutline />
+          </Link>
+        </IconItem>
         <IconItem>
           <a onClick={() => copyToBoard(`${BASE_URL}/resume`)}>
             <AiOutlineCopy />
@@ -435,14 +441,15 @@ const Profile = ({ data }) => {
 
 export default Profile
 
-import { benben } from '../benben'
+import { benben as benbenTw } from '../../data/benben.tw'
+
 export const getStaticProps = async () => {
   // const res = await fetch(`${BASE_URL}/api/benben`)
   // const data = await res.json()
 
   return {
     props: {
-      data: benben,
+      data: benbenTw,
     },
   }
 }

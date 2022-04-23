@@ -21,14 +21,14 @@ export default function Home({ data }) {
           </CardInfo>
         </Card>
         <ButtonWrapper>
-          <Button className="btn"><Link href="/projects"><span>&rarr; Click me to Projects</span></Link></Button>
-          <Button className="btn"><Link href="/resume"><span>&rarr; Click me to Resume</span></Link></Button>
+          <Button className="btn"><Link href="/projects"><span>&rarr; 點我看作品集</span></Link></Button>
+          <Button className="btn"><Link href="/resume"><span>&rarr; 點我前往履歷</span></Link></Button>
         </ButtonWrapper>
       </SectionWrapper>
       <AboutMe>
         <img src="https://i.imgur.com/jYTOeTV.png" width={150} alt="qrCode" />
-        <h3>About me</h3>
-        <p>A passion, keeping learning Front-End developer who was born in 1995. 樂於分享的開發者，喜歡 Open source 文化，擁有前端雙框架（React/Vue）技術實力，期望能持續開發出讓人驚豔的作品。</p>
+        <h3>About（關於我）</h3>
+        <p>84 年生，是一位有熱情、不斷學習新技術、樂於分享的開發者，喜歡 Open source 文化，擁有前端雙框架（React/Vue）技術實力，期望能持續開發出讓人驚豔的作品。</p>
         <br />
         <p>短期目標：熱悉 Vim 與嘸蝦米的使用，這些都是能夠跟使用者一同成長的技能，工欲善其事，必先利其器，目前也是使用 VScode 搭配 Vim 插件做為開發主要工具。</p>
         <p>中長目標：在 1 ~ 2 年內達到資深前端工程師的程度，前端是易學難精的職業，但仍然繼續前進中，正在成為資深前端的路上。</p>

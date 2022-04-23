@@ -18,7 +18,7 @@ function projects({ data }) {
 export default projects
 
 
-import { projects as data } from '../data'
+import { projects as data } from '../data/data.tw'
 export const getStaticProps = async () => {
   // const res = await fetch(`${BASE_URL}/api/projects`)
   // const data = await res.json()

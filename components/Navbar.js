@@ -13,7 +13,8 @@ function Navbar() {
       <div className="buttons">
         <Link href="/">Home</Link>
         <Link href="/projects">Portfolio</Link>
-        <a href="/resume" target="_blank">Resume</a>
+        <a href="/resume/en" target="_blank">Resume</a>
+        <Link href="/tw">Chinese/中文</Link>
       </div>
     </StyledNavbar>
   )

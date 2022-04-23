@@ -43,7 +43,7 @@ export const getStaticProps = async (context) => {
   // const res = await fetch(`${BASE_URL}/api/projects/${context.params.id}`)
   // const project = await res.json()
   const project = projects[context.params.id - 1]
-  return { 
+  return {
     props: {
       project
     }
