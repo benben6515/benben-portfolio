@@ -251,7 +251,7 @@ const Profile = ({ data }) => {
         </InformationWrapper>
 
         <Title>
-          Skills<span>（技能）</span>
+          Skills
         </Title>
         <Section>
           <SectionItem>
@@ -339,7 +339,7 @@ const Profile = ({ data }) => {
         </Section>
 
         <Title>
-          Projects<span>（專案）</span>
+          Projects
         </Title>
         <Section>
 
@@ -395,7 +395,7 @@ const Profile = ({ data }) => {
         </Section>
 
         <Title>
-          Education/Experience<span>（學經歷）</span>
+          Education/Experience
         </Title>
         <Section>
           <SectionItem>
@@ -419,18 +419,18 @@ const Profile = ({ data }) => {
         </Section>
 
         <Title>
-          References<span>（其他參考）</span>
+          References
         </Title>
         <Section>
           <SectionItem>
-            <SubTitle>部落格</SubTitle>
+            <SubTitle>Blogs</SubTitle>
               <ItemWrapper>
-                <ItemName><a href="https://benben6515.github.io/blog/">個人部落格</a></ItemName>
-                <ItemDescription>記錄一些程式筆記、讀書心得的地方。</ItemDescription>
+                <ItemName><a href="https://benben6515.github.io/blog/">Personal blog</a></ItemName>
+                <ItemDescription>Record some note, reading experience .etc.</ItemDescription>
               </ItemWrapper>
               <ItemWrapper>
-                <ItemName><a href="https://blog.errorbaker.tw/">共筆技術部落格</a></ItemName>
-                <ItemDescription>跟 Lidemy 學長姐們一起寫的共筆部落格。</ItemDescription>
+                <ItemName><a href="https://blog.errorbaker.tw/">Collaborative blog</a></ItemName>
+                <ItemDescription>Collaborative blog with Lidemy classmates.</ItemDescription>
               </ItemWrapper>
           </SectionItem>
         </Section>
