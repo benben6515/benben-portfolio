@@ -21,21 +21,22 @@ export default function Home({ data }) {
           </CardInfo>
         </Card>
         <ButtonWrapper>
-          <Button className="btn"><Link href="/projects"><span>&rarr; Click me to Projects</span></Link></Button>
-          <Button className="btn"><Link href="/resume"><span>&rarr; Click me to Resume</span></Link></Button>
+          <Button className="btn"><Link href="/projects/en"><span>&rarr; Click me to Projects</span></Link></Button>
+          <Button className="btn"><Link href="/resume/en"><span>&rarr; Click me to Resume</span></Link></Button>
         </ButtonWrapper>
       </SectionWrapper>
       <AboutMe>
         <img src="https://i.imgur.com/jYTOeTV.png" width={150} alt="qrCode" />
         <h3>About me</h3>
-        <p>A passion, keeping learning Front-End developer who was born in 1995. 樂於分享的開發者，喜歡 Open source 文化，擁有前端雙框架（React/Vue）技術實力，期望能持續開發出讓人驚豔的作品。</p>
+        <p>A passion, keeping learning Front-End developer who was born in 1995. Love sharing technology and like open source culture. With hands-on two Front-end framework (React/Vue) skills. Look forward to develop a awesome products.</p>
         <br />
-        <p>短期目標：熱悉 Vim 與嘸蝦米的使用，這些都是能夠跟使用者一同成長的技能，工欲善其事，必先利其器，目前也是使用 VScode 搭配 Vim 插件做為開發主要工具。</p>
-        <p>中長目標：在 1 ~ 2 年內達到資深前端工程師的程度，前端是易學難精的職業，但仍然繼續前進中，正在成為資深前端的路上。</p>
-        <p>期長目標：成為獨角獸（unicorn）開發者，不只局限於資深前端工程師，包含設計、後端。</p>
+        <p>Short term goal: Familiar the usage of Vim and raise the speed of typing. Those skill will follow you forever. If a worker wants to do a good job, he must first sharpen his tools. I currently use VScode with Vim plugin for mainly develop tools.</p>
+        <p>Medium term goal: Be a senior Front-End developer. I already known about Front-End is easy to learn but hard to master. Still, I keep learning and on the way to be a senior Front-End developer.</p>
+        <p>Long term goal: Be a "unicorn" developer. Not just limited to Front-End but includes Back-End, Design .etc.</p>
         <br />
-        <p>前端人多，真的能用的人少，如果覺得我是您需要的人才，迎歡隨時與我聊聊，如果遇到使用 Vim 的開發者，不一定是我，快雇用他吧！</p>
-        <p>If you meet a developer with Vim, Just hire this guy!</p>
+        <p>There are so many Front-End developers, but rarely few are outstanding. If you think I am the candidate you are looking for, feel comfortable to contact with me.</p>
+        <br />
+        <p>If you meet a developer with Vim (not necessarily me), Just hire this guy!</p>
       </AboutMe>
 
     </>

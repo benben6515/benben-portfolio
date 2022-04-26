@@ -4,7 +4,7 @@ import { FooterWrapper } from '../shared/styles'
 function Footer() {
   return (
     <FooterWrapper>
-      <div>made by <a href="https://github.com/benben6515">benben</a> &copy; 2021, background/Unsplash</div>
+      <div>made by <a href="https://github.com/benben6515">benben</a> &copy; 2022, background/Unsplash</div>
     </FooterWrapper>
   )
 }

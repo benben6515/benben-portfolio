@@ -38,7 +38,8 @@ const project = ({ project }) => {
   )
 }
 
-import { projects } from '../../../data'
+import { projects } from '../../../data/data.tw'
+
 export const getStaticProps = async (context) => {
   // const res = await fetch(`${BASE_URL}/api/projects/${context.params.id}`)
   // const project = await res.json()

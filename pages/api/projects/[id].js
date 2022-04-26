@@ -1,4 +1,4 @@
-import { projects } from '../../../data'
+import { projects } from '../../../data/data.tw'
 
 export default function handler ({ query: { id } }, res) {
   const filtered = projects.filter(project => project.id === id)

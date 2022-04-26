@@ -49,16 +49,16 @@ export const benben = {
     ],
     "JavaScript": [
       {
+        "name": "TypeScript",
+        "description": "使用 TypeScript 開發經驗"
+      },
+      {
         "name": "ES6",
         "description": "熟悉原生 ES6 的 JavaScript 語法"
       },
       {
         "name": "API 串接",
         "description": "使用 Fetch, async/await, axios 等技術，與 Web 後端溝通"
-      },
-      {
-        "name": "jQuery",
-        "description": "使用 jQuery 開發的經驗"
       },
       {
         "name": "基礎演算法、資料結構",
@@ -75,12 +75,12 @@ export const benben = {
         "description": "熟悉 React library 與 React 生態系的常用工具"
       },
       {
-        "name": "React router",
-        "description": "使用 React-router-dom 來打造 react SPA 應用程式"
+        "name": "Vue",
+        "description": "熟悉 Vue, Vue3 composition API 帶來的優勢"
       },
       {
-        "name": "Redux",
-        "description": "使用 Redux 來管理 react 中的狀態，並利用 Redux toolkit 來優化 Redux 的樣板建置"
+        "name": "Redux/Vuex",
+        "description": "使用 Redux/Vuex 來管理 react/vue 中的狀態，並利用 Redux toolkit 來優化 Redux 專案"
       },
     ],
     "BackEnd": [

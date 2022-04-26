@@ -3,11 +3,11 @@ export const benben = {
   "name": "翁士育",
   "englishName": "Benben",
   "avatar": "https://i.imgur.com/YBhcWk1.png",
-  "phone": "0903106743",
+  "phone": "(+886) 903106743",
   "email": "z2266109@gmail.com",
   "github": "https://github.com/benben6515",
   "blog": "https://benben6515.github.io/blog/",
-  "about": "Hi, I'm a Front-End developer from Taiwan. I like learn various Web skills with hands-on both React and Vue experience. Usually I'm a workaholic, but I like reading book and writing blog when when I have free time",
+  "about": "Hi, I'm a Front-End developer from Taiwan. I like learn various Web skills with hands-on both React and Vue experience. Usually I'm a workaholic, but when I have free time I like reading book and writing blog",
   "experience": [
     {
       "name": "Red Envelope - Front-End",
@@ -35,7 +35,7 @@ export const benben = {
         "description": "familiar with HTML, CSS Selector. well knowing BEM naming"
       },
       {
-        "name": "CSS 排版",
+        "name": "CSS Layout",
         "description": "well knowing layout attribute i.e. Float, Flex, Grid"
       },
       {
@@ -53,16 +53,16 @@ export const benben = {
     ],
     "JavaScript": [
       {
+        "name": "TypeScript",
+        "description": "experience of TypeScript development"
+      },
+      {
         "name": "ES6",
         "description": "familiar with native ES6 JavaScript syntax"
       },
       {
         "name": "RESTful API",
         "description": "using Fetch, async/await, axios to communicate with Back-End"
-      },
-      {
-        "name": "jQuery",
-        "description": "experience of jQuery development"
       },
       {
         "name": "Basic Algorithm/Data Structure",

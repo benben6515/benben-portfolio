@@ -22,7 +22,7 @@ export default function Home({ data }) {
         </Card>
         <ButtonWrapper>
           <Button className="btn"><Link href="/projects"><span>&rarr; 點我看作品集</span></Link></Button>
-          <Button className="btn"><Link href="/resume"><span>&rarr; 點我前往履歷</span></Link></Button>
+          <Button className="btn"><Link href="/resume/tw"><span>&rarr; 點我前往履歷</span></Link></Button>
         </ButtonWrapper>
       </SectionWrapper>
       <AboutMe>

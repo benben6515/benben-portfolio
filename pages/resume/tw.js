@@ -4,9 +4,11 @@ import Link from "next/link"
 import MyHead from "../../components/MyHead"
 import {
   SiJavascript,
+  SiTypescript,
   SiCss3,
   SiHtml5,
   SiReact,
+  SiVuedotjs,
   SiRedux,
   SiNodedotjs,
   SiNetlify,
@@ -210,8 +212,10 @@ const Profile = ({ data }) => {
           </IconItem>
         </Link>
         <IconItem>
-          <Link href='./en'>
-            <IoLanguageOutline />
+          <Link href='/resume/en'>
+            <a>
+              <IoLanguageOutline />
+            </a>
           </Link>
         </IconItem>
         <IconItem>
@@ -272,6 +276,7 @@ const Profile = ({ data }) => {
             <SubTitle>
               JavaScript
               <SiJavascript />
+              <SiTypescript />
             </SubTitle>
             {skills.JavaScript.map((e) => (
               <ItemWrapper key={e.name}>
@@ -285,6 +290,7 @@ const Profile = ({ data }) => {
             <SubTitle>
               Framework
               <SiReact />
+              <SiVuedotjs />
               <SiRedux />
             </SubTitle>
             {skills.Framework.map((e) => (
@@ -399,8 +405,8 @@ const Profile = ({ data }) => {
         </Title>
         <Section>
           <SectionItem>
-            <SubTitle>Education</SubTitle>
-            {data.education.map((e) => (
+            <SubTitle>Experience</SubTitle>
+            {data.experience.map((e) => (
               <ItemWrapper key={e.name}>
                 <ItemName>{e.name}</ItemName>
                 <ItemDescription>{e.time}</ItemDescription>
@@ -408,8 +414,8 @@ const Profile = ({ data }) => {
             ))}
           </SectionItem>
           <SectionItem>
-            <SubTitle>Experience</SubTitle>
-            {data.experience.map((e) => (
+            <SubTitle>Education</SubTitle>
+            {data.education.map((e) => (
               <ItemWrapper key={e.name}>
                 <ItemName>{e.name}</ItemName>
                 <ItemDescription>{e.time}</ItemDescription>
