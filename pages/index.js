@@ -21,7 +21,7 @@ export default function Home({ data }) {
           </CardInfo>
         </Card>
         <ButtonWrapper>
-          <Button className="btn"><Link href="/projects/en"><span>&rarr; Click me to Projects</span></Link></Button>
+          <Button className="btn"><Link href="/projects"><span>&rarr; Click me to Projects</span></Link></Button>
           <Button className="btn"><Link href="/resume/en"><span>&rarr; Click me to Resume</span></Link></Button>
         </ButtonWrapper>
       </SectionWrapper>
