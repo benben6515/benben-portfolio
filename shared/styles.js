@@ -56,10 +56,10 @@ const typing = keyframes`
     width: 0;
   }
   50% {
-    width: 22.5rem;
+    width: 22rem;
   }
   100% {
-    width: 22.5rem;
+    width: 22rem;
   }
 `
 
