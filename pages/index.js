@@ -45,7 +45,7 @@ export default function Home({ data }) {
         <br />
         <p>There are so many Front-End developers, but rarely few are outstanding. If you think I am the candidate you are looking for, feel comfortable to contact with me.</p>
         <br />
-        <p>If you meet a developer with Vim (not necessarily me), Just hire this guy!</p>
+        <p>ps. If you meet a developer with Vim (not necessarily me), Just hire this guy!</p>
       </AboutMe>
 
     </>

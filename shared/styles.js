@@ -56,10 +56,10 @@ const typing = keyframes`
     width: 0;
   }
   50% {
-    width: 19ch;
+    width: 22.5rem;
   }
   100% {
-    width: 19ch;
+    width: 22.5rem;
   }
 `
 
@@ -158,7 +158,6 @@ export const HomepageTitle = styled.h1`
 `
 
 export const HomepageTitleTyping = styled(HomepageTitle)`
-  color: #fff;
   width: 0;
   animation: ${typing} 4s steps(25) infinite,
     ${blink} .5s step-end infinite alternate;
