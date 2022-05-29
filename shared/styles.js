@@ -16,7 +16,7 @@ injectGlobal`
   a {
     text-decoration: none;
     cursor: pointer;
-    color: #4ac;
+    color: #56f;
     position: relative;
     transition: .3s;
   }
@@ -37,7 +37,7 @@ injectGlobal`
     height: 1px;
   }
   a:visited {
-    color: #4ac;
+    color: #56f;
   }
 `
 
@@ -51,6 +51,24 @@ const rotate = keyframes`
   }
 `
 
+const typing = keyframes`
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 19ch;
+  }
+  100% {
+    width: 19ch;
+  }
+`
+
+const blink = keyframes`
+  50% {
+    border-color: transparent;
+  }
+`
+
 // styled components ------------------------------
 
 // navbar
@@ -60,7 +78,7 @@ export const StyledNavbar = styled.nav`
   display: grid;
   grid-template-columns: 6rem auto;
   place-items: center center;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background: #222;
@@ -109,6 +127,7 @@ export const SectionWrapper = styled.div`
   place-items: center center;
   min-height: calc(100vh - 2rem);
   gap: 1rem;
+  margin-top: 1rem;
   br {
     margin: 2rem 0;
   }
@@ -134,10 +153,25 @@ export const SectionWrapper = styled.div`
   }
 `
 
+export const HomepageTitle = styled.h1`
+  color: #fff;
+`
+
+export const HomepageTitleTyping = styled(HomepageTitle)`
+  color: #fff;
+  width: 0;
+  animation: ${typing} 4s steps(25) infinite,
+    ${blink} .5s step-end infinite alternate;
+  animation-delay: 1s;
+  border-right: 3px solid;
+  white-space: nowrap;
+  overflow: hidden;
+`
+
 export const Card = styled.div`
   height: 250px;
   width: 320px;
-  margin-top: 2rem;
+  margin-top: 1rem;
   background: rgba(255,255,255,0.2);
   backdrop-filter: blur(10px);
   border-radius: 1rem;
@@ -149,7 +183,7 @@ export const Card = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 0 1rem;
+  padding: 0 0 0 1rem;
   transform: scale(0.9) perspective(600px) rotateX(15deg);
   &:hover {
     background: rgba(255,255,255,0.8);
@@ -206,12 +240,16 @@ export const CardInfo = styled.div`
 export const ButtonWrapper = styled.div`
   display: flex;
   gap: 2rem;
+  @media screen and (max-width: 568px) {
+    gap: 1rem;
+  }
 `
 
 export const Button = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: .7rem 1rem;
   margin: 4rem auto 3rem;
   border-radius: .2rem;
@@ -221,6 +259,9 @@ export const Button = styled.div`
   overflow: hidden;
   transition: .4s;
   -webkit-box-reflect: below 3px linear-gradient(transparent 30%, #000 100%);
+  @media screen and (max-width: 568px) {
+    max-width: 8rem;
+  }
   span {
     color: rgba(255,255,255,0.5);
     z-index: 1;
@@ -246,7 +287,7 @@ export const Button = styled.div`
 export const AboutMe = styled.div`
   display: flex;
   flex-direction: column;
-  width: clamp(320px, 80%, 500px);
+  width: clamp(300px, 80%, 500px);
   color: rgba(255, 255, 255, 0.8);
   margin: 2rem auto 3rem;
   gap: 1rem;

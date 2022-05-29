@@ -4,7 +4,7 @@ export const benben = {
   "englishName": "Benben",
   "avatar": "https://i.imgur.com/YBhcWk1.png",
   "phone": "(+886) 903106743",
-  "email": "z2266109@gmail.com",
+  "email": "(gmail) z2266109",
   "github": "https://github.com/benben6515",
   "blog": "https://benben6515.github.io/blog/",
   "about": "Hi, I'm a Front-End developer from Taiwan. I like learn various Web skills with hands-on both React and Vue experience. Usually I'm a workaholic, but when I have free time I like reading book and writing blog",

@@ -1,22 +1,31 @@
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import MyHead from '../components/MyHead'
+// import BackgroundEffect from '../components/BackgroundEffect'
+
 // import { BASE_URL } from '../config'
-import { SectionWrapper, Card, CardInfo, ButtonWrapper, Button, AboutMe } from '../shared/styles'
+import { SectionWrapper, HomepageTitle, HomepageTitleTyping, Card, CardInfo, ButtonWrapper, Button, AboutMe } from '../shared/styles'
 import { BsTelephone, BsGithub }  from 'react-icons/bs'
 import { AiOutlineMail } from 'react-icons/ai'
+
+const BackgroundEffect = dynamic(() => import('../components/BackgroundEffect'))
 
 export default function Home({ data }) {
   return (
     <>
       <MyHead title="Benben" />
 
+      <BackgroundEffect />
+
       <SectionWrapper>
+        <HomepageTitle>Hi, I'm Benben.</HomepageTitle>
+        <HomepageTitleTyping>A Front-End developer.</HomepageTitleTyping>
         <Card>
           <img className="img" src={data.avatar} />
           <CardInfo>
             <h3>{data.englishName}<span>（{data.name}）</span></h3>
-            <p><AiOutlineMail /> {data.email}</p>
             <p><BsTelephone /> {data.phone}</p>
+            <a href="mailto:z2266109@gmail.com"><AiOutlineMail /> {data.email}</a>
             <a href={data.github} target="_blank"><p><BsGithub /> {data.github.slice(-10)}</p></a>
           </CardInfo>
         </Card>

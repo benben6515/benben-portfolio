@@ -11,10 +11,10 @@ function Navbar() {
         <img src={benben.src} width="30px"/>
       </Link>
       <div className="buttons">
-        <Link href="/">Home page</Link>
-        <Link href="/tw">中文版首頁</Link>
+        <Link href="/">Home</Link>
         <Link href="/projects">Portfolio</Link>
         <a href="/resume/en" target="_blank">Resume</a>
+        <Link href="/tw">中文</Link>
       </div>
     </StyledNavbar>
   )

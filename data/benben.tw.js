@@ -4,10 +4,10 @@ export const benben = {
   "englishName": "Benben",
   "avatar": "https://i.imgur.com/YBhcWk1.png",
   "phone": "0903106743",
-  "email": "z2266109@gmail.com",
+  "email": "(gmail) z2266109",
   "github": "https://github.com/benben6515",
   "blog": "https://benben6515.github.io/blog/",
-  "about": "你好！我是一個前端轉職者，喜歡研究各種 Web 技術，最近剛於 Lidemy 程式導師計畫第 5 期畢業，是個學習狂、工作狂，平時喜歡閱讀書藉、寫寫部落格。",
+  "about": "你好！我是一個前端開發者，喜歡研究各種 Web 技術，目前沉浸在 Vue, React 的生態圈，有點小學習狂、工作狂，平時喜歡閱讀書藉、寫寫部落格，當然還有寫寫 code。",
   "experience": [
     {
       "name": "RE 紅包 - 前端工程師",
