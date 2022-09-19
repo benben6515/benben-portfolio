@@ -11,12 +11,12 @@ export const benben = {
   "experience": [
     {
       "name": "Red Envelope - Front-End",
-      "time": "2022.02 ~ current"
+      "time": "2021.11 ~ current"
     },
-    {
-      "name": "King-One Design - Front-End",
-      "time": "2021.11 ~ 2022.02"
-    },
+    // {
+    //   "name": "King-One Design - Front-End",
+    //   "time": "2021.11 ~ 2022.02"
+    // },
   ],
   "education": [
     {
@@ -140,12 +140,13 @@ export const benben = {
       },
     ]
   },
-  "projects": {
-    "zAxis": {
+  "projects": [
+    {
       "name": "Z-axis",
-      "deme": "https://zaxis.netlify.app/#/",
+      "demo": "https://zaxis.netlify.app/#/",
       "repo": "https://github.com/angelina524/final-project-Z-axis-frontend/tree/dev",
       "image": "https://user-images.githubusercontent.com/61361198/136129383-66df350c-7f8a-454e-9f51-dcbe7d916310.gif",
+      "youtube": "https://youtu.be/-sDzeKgKeGw",
       "record": "https://hackmd.io/@benben6515/H1-rEQb8_",
       "details": [
         {
@@ -162,7 +163,7 @@ export const benben = {
         }
       ]
     },
-    // "portfolio": {
+    // {
     //   "name": "Benben-portfolio",
     //   "demo": "https://benben-portfolio.vercel.app/",
     //   "repo": "https://github.com/benben6515/benben-portfolio",
@@ -184,27 +185,49 @@ export const benben = {
     //     }
     //   ]
     // },
-    "gigabyteIndustry": {
-      "name": "Gigabyte-industry",
-      "demo": "https://industry.gigabyte.com",
+    // {
+    //   "name": "Gigabyte-industry",
+    //   "demo": "https://industry.gigabyte.com",
+    //   "repo": "",
+    //   "youtube": "https://www.youtube.com/channel/UCM_VXTttz39aJwPM2oBrIzQ",
+    //   "image": "https://i.imgur.com/K2AGfUP.gif",
+    //   "record": "",
+    //   "details": [
+    //     {
+    //       "name": "Project Brief",
+    //       "description": "The project for customer's marketing purpose. There are considerable interactive effect with 3D models. Also it is multilingual web page. I was in charge of whole Front-End part"
+    //     },
+    //     {
+    //       "name": "Tech Stack",
+    //       "description": "Developed with Vue, Pug/Sass, Babylon.js(3D framework) in front-end. Back-End developed with Laravel by back-end developers."
+    //     },
+    //     {
+    //       "name": "Development Process",
+    //       "description": "The project was created when I was in the King-One Design Company. I was responsible for whole front-end part. Communicated with PM, Designer, Back-End and even client, to resolved occurred problems. Development schedule was about one month, and I was responsible for maintain this project"
+    //     }
+    //   ]
+    // },
+    {
+      "name": "APEC 2021 Event",
+      "demo": "https://apec2021-rec-renewable-energy.com/event",
       "repo": "",
-      "youtube": "https://www.youtube.com/channel/UCM_VXTttz39aJwPM2oBrIzQ",
-      "image": "https://i.imgur.com/K2AGfUP.gif",
+      "youtube": "https://www.youtube.com/watch?v=u6AwnvPZ_6s",
+      "image": "https://hackmd.io/_uploads/rkzi2USbo.gif",
       "record": "",
       "details": [
         {
           "name": "Project Brief",
-          "description": "The project for customer's marketing purpose. There are considerable interactive effect with 3D models. Also it is multilingual web page. I was in charge of whole Front-End part"
+          "description": "The project for customer's event purpose. There are considerable interactive fancy effects. Also it is multilingual web page. I was in charge of whole Front-End part."
         },
         {
           "name": "Tech Stack",
-          "description": "Developed with Vue, Pug/Sass, Babylon.js(3D framework) in front-end. Back-End developed with Laravel by back-end developers."
+          "description": "Developed with Vue, Pug/Sass in front-end. Back-End developed with Laravel by back-end developers."
         },
         {
           "name": "Development Process",
-          "description": "The project was created when I was in the King-One Design Company. I was responsible for whole front-end part. Communicated with PM, Designer, Back-End and even client, to resolved occurred problems. Development schedule was about one month, and I was responsible for maintain this project"
+          "description": "This project is re-build project with add new feature in old project. I response for all task, adding new technology and meanwhile maintain old parts."
         }
       ]
     }
-  }
+  ]
 }

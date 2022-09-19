@@ -37,7 +37,7 @@ export default function Home({ data }) {
       <AboutMe>
         <img src="https://i.imgur.com/jYTOeTV.png" width={150} alt="qrCode" />
         <h3>About me</h3>
-        <p>A passion, keeping learning Front-End developer who was born in 1995. Love sharing technology and like open source culture. With hands-on two Front-end framework (React/Vue) skills. Look forward to develop a awesome products.</p>
+        <p>A passion, keeping learning Front-End developer who was born in 1995. Love sharing technology and like open source culture. I like learning on CS50, MIT open class. With hands-on two Front-end framework (React/Vue) skills. Look forward to develop a awesome products.</p>
         <br />
         <p>Short term goal: Familiar the usage of Vim and raise the speed of typing. Those skill will follow you forever. If a worker wants to do a good job, he must first sharpen his tools. I currently use VScode with Vim plugin for mainly develop tools.</p>
         <p>Medium term goal: Be a senior Front-End developer. I already known about Front-End is easy to learn but hard to master. Still, I keep learning and on the way to be a senior Front-End developer.</p>

@@ -197,7 +197,6 @@ const ProjectLinks = styled.div`
 
 const Profile = ({ data }) => {
   const { skills, projects } = data
-  const { zAxis, portfolio, gigabyteIndustry } = projects
 
   return (
     <PageWrapper>
@@ -349,54 +348,39 @@ const Profile = ({ data }) => {
         </Title>
         <Section>
 
-          <ProjectWrapper>
-            <ProjectItem>
-              <SubTitle>1. {gigabyteIndustry.name}</SubTitle>
-              <ItemWrapper>
-                <ProjectLinks>
-                  <a href={gigabyteIndustry.demo}>
-                    <ItemName>Demo</ItemName>
-                  </a>
-                  <a href={gigabyteIndustry.youtube}>
-                    <ItemName>Youtube</ItemName>
-                  </a>
-                </ProjectLinks>
-              </ItemWrapper>
-              {gigabyteIndustry.details.map((e) => (
-                <ItemWrapper key={e.name}>
-                  <ItemName>{e.name}</ItemName>
-                  <ItemDescription>{e.description}</ItemDescription>
+          {projects.map((project, idx) =>
+            <ProjectWrapper>
+              <ProjectItem>
+                <SubTitle>{idx + 1}. {project.name}</SubTitle>
+                <ItemWrapper>
+                  <ProjectLinks>
+                    { project.demo ?
+                      <a href={project.demo}>
+                        <ItemName>Demo</ItemName>
+                      </a>
+                    : null}
+                    { project.repo ?
+                      <a href={project.repo}>
+                        <ItemName>Github</ItemName>
+                      </a>
+                    : null}
+                    { project.youtube ?
+                    <a href={project.youtube}>
+                      <ItemName>Youtube</ItemName>
+                    </a>
+                    : null}
+                  </ProjectLinks>
                 </ItemWrapper>
-              ))}
-            </ProjectItem>
-            <img src={gigabyteIndustry.image} />
-          </ProjectWrapper>
-
-          <ProjectWrapper>
-            <ProjectItem>
-              <SubTitle>2. {zAxis.name}</SubTitle>
-              <ItemWrapper>
-                <ProjectLinks>
-                  <a href={zAxis.demo}>
-                    <ItemName>Demo</ItemName>
-                  </a>
-                  <a href={zAxis.repo}>
-                    <ItemName>Github</ItemName>
-                  </a>
-                  <a href={zAxis.youtube}>
-                    <ItemName>Youtube</ItemName>
-                  </a>
-                </ProjectLinks>
-              </ItemWrapper>
-              {zAxis.details.map((e) => (
-                <ItemWrapper key={e.name}>
-                  <ItemName>{e.name}</ItemName>
-                  <ItemDescription>{e.description}</ItemDescription>
-                </ItemWrapper>
-              ))}
-            </ProjectItem>
-            <img src={zAxis.image} />
-          </ProjectWrapper>
+                {project.details.map((e) => (
+                  <ItemWrapper key={e.name}>
+                    <ItemName>{e.name}</ItemName>
+                    <ItemDescription>{e.description}</ItemDescription>
+                  </ItemWrapper>
+                ))}
+              </ProjectItem>
+              <img src={project.image} />
+            </ProjectWrapper>
+          )}
 
         </Section>
 
@@ -431,11 +415,11 @@ const Profile = ({ data }) => {
           <SectionItem>
             <SubTitle>部落格</SubTitle>
               <ItemWrapper>
-                <ItemName><a href="https://benben6515.github.io/blog/">個人部落格</a></ItemName>
+                <ItemName><a href="https://benben.me" target="_blank">個人部落格</a></ItemName>
                 <ItemDescription>記錄一些程式筆記、讀書心得的地方。</ItemDescription>
               </ItemWrapper>
               <ItemWrapper>
-                <ItemName><a href="https://blog.errorbaker.tw/">共筆技術部落格</a></ItemName>
+                <ItemName><a href="https://blog.errorbaker.tw/" target="_blank">共筆技術部落格</a></ItemName>
                 <ItemDescription>跟 Lidemy 學長姐們一起寫的共筆部落格。</ItemDescription>
               </ItemWrapper>
           </SectionItem>

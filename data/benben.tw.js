@@ -11,12 +11,12 @@ export const benben = {
   "experience": [
     {
       "name": "RE 紅包 - 前端工程師",
-      "time": "2022.02 ~ current"
+      "time": "2021.11 ~ current"
     },
-    {
-      "name": "王一設計 - 前端工程師",
-      "time": "2021.11 ~ 2022.02"
-    },
+    // {
+    //   "name": "王一設計 - 前端工程師",
+    //   "time": "2021.11 ~ 2022.02"
+    // },
   ],
   "education": [
     {
@@ -140,12 +140,13 @@ export const benben = {
       },
     ]
   },
-  "projects": {
-    "zAxis": {
+  "projects": [
+    {
       "name": "Z-axis",
-      "deme": "https://zaxis.netlify.app/#/",
+      "demo": "https://zaxis.netlify.app/#/",
       "repo": "https://github.com/angelina524/final-project-Z-axis-frontend/tree/dev",
       "image": "https://user-images.githubusercontent.com/61361198/136129383-66df350c-7f8a-454e-9f51-dcbe7d916310.gif",
+      "youtube": "https://youtu.be/-sDzeKgKeGw",
       "record": "https://hackmd.io/@benben6515/H1-rEQb8_",
       "details": [
         {
@@ -162,7 +163,7 @@ export const benben = {
         }
       ]
     },
-    // "portfolio": {
+    // {
     //   "name": "Benben-portfolio",
     //   "demo": "https://benben-portfolio.vercel.app/",
     //   "repo": "https://github.com/benben6515/benben-portfolio",
@@ -184,27 +185,49 @@ export const benben = {
     //     }
     //   ]
     // },
-    "gigabyteIndustry": {
-      "name": "Gigabyte-industry",
-      "demo": "https://industry.gigabyte.com",
+    // {
+    //   "name": "Gigabyte-industry",
+    //   "demo": "https://industry.gigabyte.com",
+    //   "repo": "",
+    //   "youtube": "https://www.youtube.com/channel/UCM_VXTttz39aJwPM2oBrIzQ",
+    //   "image": "https://i.imgur.com/K2AGfUP.gif",
+    //   "record": "",
+    //   "details": [
+    //     {
+    //       "name": "專案說明",
+    //       "description": "為客戶數位行銷所進行的專案，充滿互動效果，有大量的 3D 模組互動，並擁有中、英雙語系的切換，我負責了整個前端部分。"
+    //     },
+    //     {
+    //       "name": "使用技術",
+    //       "description": "前端的部分採用 Vue, Pug/Sass, Babylon.js（3D framework） 開發，後端則是使用 Laravel ，由後端所建立。"
+    //     },
+    //     {
+    //       "name": "開發過程",
+    //       "description": "在王一設計互動任職前端工程師時的專案作品，負責全部的前端開發，期間於 PM、設計師、後端，甚至客戶進行溝通，並解決了新的問題，開發時程約一個月，並進行之後的維護。"
+    //     }
+    //   ]
+    // },
+    {
+      "name": "APEC 2021 Event",
+      "demo": "https://apec2021-rec-renewable-energy.com/event",
       "repo": "",
-      "youtube": "https://www.youtube.com/channel/UCM_VXTttz39aJwPM2oBrIzQ",
-      "image": "https://i.imgur.com/K2AGfUP.gif",
+      "youtube": "https://www.youtube.com/watch?v=u6AwnvPZ_6s",
+      "image": "https://hackmd.io/_uploads/rkzi2USbo.gif",
       "record": "",
       "details": [
         {
           "name": "專案說明",
-          "description": "為客戶數位行銷所進行的專案，充滿互動效果，有大量的 3D 模組互動，並擁有中、英雙語系的切換，我負責了整個前端部分。"
+          "description": "為客戶活動所進行的專案，有 3D 的視覺效果，我負責了整個前端的整合，並加入新技術。"
         },
         {
           "name": "使用技術",
-          "description": "前端的部分採用 Vue, Pug/Sass, Babylon.js（3D framework） 開發，後端則是使用 Laravel ，由後端所建立。"
+          "description": "前端的部分採用 Vue, Pug/Sass ， 後端則是使用 Laravel ，由後端所建立。"
         },
         {
           "name": "開發過程",
-          "description": "在王一設計互動任職前端工程師時的專案作品，負責全部的前端開發，期間於 PM、設計師、後端，甚至客戶進行溝通，並解決了新的問題，開發時程約一個月，並進行之後的維護。"
+          "description": "這是一個重構的專案，並在舊的專案加入新的功能。我負責了整個任務，前端的整合加入新技術，同時維護舊有的功能。"
         }
       ]
     }
-  }
+  ]
 }
