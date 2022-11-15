@@ -238,12 +238,8 @@ const Profile = ({ data }) => {
               <span> （{data.name}） </span>
             </Title>
             <p>{data.about}</p>
-            <p>
-              <AiOutlineMail /> {data.email}
-            </p>
-            <p>
-              <BsTelephone /> {data.phone}
-            </p>
+            <p><AiOutlineMail /> {data.email}</p>
+            <p><BsTelephone /> {data.phone}</p>
             <a href={data.github} target='_blank'>
               <p>
                 <BsGithub value={{ color: "#333", size: "1.25rem" }} />{" "}
@@ -256,6 +252,7 @@ const Profile = ({ data }) => {
         <Title>
           Skills<span>（技能）</span>
         </Title>
+
         <Section>
           <SectionItem>
             <SubTitle>
@@ -346,8 +343,8 @@ const Profile = ({ data }) => {
         <Title>
           Projects<span>（專案）</span>
         </Title>
-        <Section>
 
+        <Section>
           {projects.map((project, idx) =>
             <ProjectWrapper>
               <ProjectItem>
@@ -371,6 +368,7 @@ const Profile = ({ data }) => {
                     : null}
                   </ProjectLinks>
                 </ItemWrapper>
+
                 {project.details.map((e) => (
                   <ItemWrapper key={e.name}>
                     <ItemName>{e.name}</ItemName>
@@ -387,6 +385,7 @@ const Profile = ({ data }) => {
         <Title>
           Education/Experience<span>（學經歷）</span>
         </Title>
+
         <Section>
           <SectionItem>
             <SubTitle>Experience</SubTitle>
@@ -434,9 +433,6 @@ export default Profile
 import { benben as benbenTw } from '../../data/benben.tw'
 
 export const getStaticProps = async () => {
-  // const res = await fetch(`${BASE_URL}/api/benben`)
-  // const data = await res.json()
-
   return {
     props: {
       data: benbenTw,

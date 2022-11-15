@@ -1,9 +1,7 @@
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import MyHead from '../components/MyHead'
-// import BackgroundEffect from '../components/BackgroundEffect'
 
-// import { BASE_URL } from '../config'
 import { SectionWrapper, HomepageTitle, HomepageTitleTyping, Card, CardInfo, ButtonWrapper, Button, AboutMe } from '../shared/styles'
 import { BsTelephone, BsGithub }  from 'react-icons/bs'
 import { AiOutlineMail } from 'react-icons/ai'
@@ -18,7 +16,7 @@ export default function Home({ data }) {
       <BackgroundEffect />
 
       <SectionWrapper>
-        <HomepageTitle>Hi, I'm Benben.</HomepageTitle>
+        <HomepageTitle>Hi, I'm <span>Benben</span></HomepageTitle>
         <HomepageTitleTyping>A Front-End developer.</HomepageTitleTyping>
         <Card>
           <img className="img" src={data.avatar} />
@@ -29,11 +27,17 @@ export default function Home({ data }) {
             <a href={data.github} target="_blank"><p><BsGithub /> {data.github.slice(-10)}</p></a>
           </CardInfo>
         </Card>
+
         <ButtonWrapper>
-          <Button className="btn"><Link href="/projects"><span>&rarr; Click me to Projects</span></Link></Button>
-          <Button className="btn"><Link href="/resume/en"><span>&rarr; Click me to Resume</span></Link></Button>
+          <Button className="btn">
+            <Link href="/projects"><span>👉 Check my Projects</span></Link>
+          </Button>
+          <Button className="btn">
+            <Link href="/resume/en"><span>👉 Check my Resume</span></Link>
+          </Button>
         </ButtonWrapper>
       </SectionWrapper>
+
       <AboutMe>
         <img src="https://i.imgur.com/jYTOeTV.png" width={150} alt="qrCode" />
         <h3>About me</h3>
@@ -47,17 +51,13 @@ export default function Home({ data }) {
         <br />
         <p>ps. If you meet a developer with Vim (not necessarily me), Just hire this guy!</p>
       </AboutMe>
-
     </>
   )
 }
 
-
 import { benben } from '../data/benben.en'
-export const getStaticProps = async () => {
-  // const res = await fetch(`${BASE_URL}/api/benben`)
-  // const data = await res.json()
 
+export const getStaticProps = async () => {
   return {
     props: {
       data: benben

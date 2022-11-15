@@ -1,7 +1,13 @@
 import { injectGlobal, keyframes } from '@emotion/css'
 import styled from '@emotion/styled'
 
+const font = 'https://fonts.gstatic.com/s/reeniebeanie/v16/z7NSdR76eDkaJKZJFkkjuvWxXPq1q6Gjb_0.woff2'
+
 injectGlobal`
+  @font-face {
+    font-family: 'Reenie Beanie';
+    src: url(${font}) format('truetype');
+  }
   * {
     margin: 0;
     padding: 0;
@@ -67,6 +73,15 @@ const blink = keyframes`
   50% {
     border-color: transparent;
   }
+`
+
+const glow = keyframes`
+from {
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e620e3, 0 0 40px #e620e3, 0 0 50px #e620e3, 0 0 60px #e620e3, 0 0 70px #e620e3;
+}
+to {
+  text-shadow: 0 0 20px #fff, 0 0 30px #ff6df6, 0 0 40px #ff6df6, 0 0 50px #ff6df6, 0 0 60px #ff6df6, 0 0 70px #ff6df6, 0 0 80px #ff6df6;
+}
 `
 
 // styled components ------------------------------
@@ -155,9 +170,18 @@ export const SectionWrapper = styled.div`
 
 export const HomepageTitle = styled.h1`
   color: #fff;
+  font-size: 4.25rem;
+  font-family: 'Reenie Beanie', sans-serif;
+  span {
+    color: #fff;
+    background: linear(#fff, #333);
+    text-align: center;
+    animation: ${glow} 1s ease-in-out infinite alternate;
+  }
 `
 
-export const HomepageTitleTyping = styled(HomepageTitle)`
+export const HomepageTitleTyping = styled.h1`
+  color: #fff;
   width: 0;
   animation: ${typing} 4s steps(25) infinite,
     ${blink} .5s step-end infinite alternate;
@@ -262,8 +286,9 @@ export const Button = styled.div`
     max-width: 8rem;
   }
   span {
-    color: rgba(255,255,255,0.5);
-    z-index: 1;
+    position: relative;
+    color: rgba(255,255,255,0.6);
+    z-index: 2;
   }
   &:hover {
     box-shadow: 0 0 10px #4ac, 0 0 20px #4ac, 0 0 30px #4ac;
@@ -274,6 +299,7 @@ export const Button = styled.div`
     background: #222;
     inset: 3px;
     border-radius: .2rem;
+    z-index: 1;
   }
   &:hover::after {
     background: #4ac;
