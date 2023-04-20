@@ -6,7 +6,7 @@ function ProjectList({ projects }) {
   return (
     <StyledProjectList>
       {projects.map((project) => (
-        <ProjectItem project={project} key={project.id}/>
+        <ProjectItem project={project} key={project.id} />
       ))}
     </StyledProjectList>
   )

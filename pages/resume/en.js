@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "@emotion/styled"
-import Link from "next/link"
-import MyHead from "../../components/MyHead"
+import React from 'react'
+import styled from '@emotion/styled'
+import Link from 'next/link'
+import MyHead from '../../components/MyHead'
 import {
   SiJavascript,
   SiTypescript,
@@ -16,18 +16,13 @@ import {
   SiSequelize,
   SiVim,
   SiGit,
-} from "react-icons/si"
-import { BsTelephone, BsGithub } from "react-icons/bs"
-import {
-  AiOutlineMail,
-  AiOutlineRollback,
-  AiOutlineCopy,
-  AiOutlinePrinter,
-} from "react-icons/ai"
-import { IoLanguageOutline } from "react-icons/io5"
+} from 'react-icons/si'
+import { BsTelephone, BsGithub } from 'react-icons/bs'
+import { AiOutlineMail, AiOutlineRollback, AiOutlineCopy, AiOutlinePrinter } from 'react-icons/ai'
+import { IoLanguageOutline } from 'react-icons/io5'
 
-import { BASE_URL } from "../../config"
-import { copyToBoard } from "../../helper"
+import { BASE_URL } from '../../config'
+import { copyToBoard } from '../../helper'
 
 const PageWrapper = styled.div`
   width: 100%;
@@ -79,7 +74,7 @@ const IconItem = styled.div`
   text-align: center;
   border-radius: 50%;
   background: #fafafa;
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.2), inset 2px 2px 5px rgba(255,255,255,1), inset -2px -2px 5px rgba(255,255,255,0.8);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2), inset 2px 2px 5px rgba(255, 255, 255, 1), inset -2px -2px 5px rgba(255, 255, 255, 0.8);
   filter: brightness(1);
   transition: 0.3s;
   cursor: pointer;
@@ -160,7 +155,7 @@ const ItemName = styled.p`
   font-size: 1rem;
   margin: 0.5rem 0;
   &::before {
-    content: "• ";
+    content: '• ';
   }
 `
 
@@ -203,7 +198,7 @@ const Profile = ({ data }) => {
       <MyHead title="Benben's Resume" />
 
       <IconWrapper>
-        <Link href='/'>
+        <Link href="/">
           <IconItem>
             <span>
               <AiOutlineRollback />
@@ -211,7 +206,7 @@ const Profile = ({ data }) => {
           </IconItem>
         </Link>
         <IconItem>
-          <Link href='/resume/tw'>
+          <Link href="/resume/tw">
             <span>
               <IoLanguageOutline />
             </span>
@@ -238,20 +233,22 @@ const Profile = ({ data }) => {
               <span> （{data.name}） </span>
             </Title>
             <p>{data.about}</p>
-            <p><AiOutlineMail />{data.email}</p>
-            <p> <BsTelephone />{data.phone}</p>
-            <a href={data.github} target='_blank'>
+            <p>
+              <BsTelephone />
+              {data.phone}
+            </p>
+            <a href="mailto:z2266109@gmail.com">
+              <AiOutlineMail /> {data.email}
+            </a>
+            <a href={data.github} target="_blank">
               <p>
-                <BsGithub value={{ color: "#333", size: "1.25rem" }} />{" "}
-                {data.github.slice(-10)}
+                <BsGithub value={{ color: '#333', size: '1.25rem' }} /> {data.github.slice(-10)}
               </p>
             </a>
           </Information>
         </InformationWrapper>
 
-        <Title>
-          Skills
-        </Title>
+        <Title>Skills</Title>
 
         <Section>
           <SectionItem>
@@ -340,32 +337,32 @@ const Profile = ({ data }) => {
           </SectionItem>
         </Section>
 
-        <Title>
-          Projects
-        </Title>
+        <Title>Projects</Title>
 
         <Section>
-          {projects.map((project, idx) =>
+          {projects.map((project, idx) => (
             <ProjectWrapper>
               <ProjectItem>
-                <SubTitle>{idx + 1}. {project.name}</SubTitle>
+                <SubTitle>
+                  {idx + 1}. {project.name}
+                </SubTitle>
                 <ItemWrapper>
                   <ProjectLinks>
-                    { project.demo ?
+                    {project.demo ? (
                       <a href={project.demo}>
                         <ItemName>Demo</ItemName>
                       </a>
-                    : null}
-                    { project.repo ?
+                    ) : null}
+                    {project.repo ? (
                       <a href={project.repo}>
                         <ItemName>Github</ItemName>
                       </a>
-                    : null}
-                    { project.youtube ?
-                    <a href={project.youtube}>
-                      <ItemName>Youtube</ItemName>
-                    </a>
-                    : null}
+                    ) : null}
+                    {project.youtube ? (
+                      <a href={project.youtube}>
+                        <ItemName>Youtube</ItemName>
+                      </a>
+                    ) : null}
                   </ProjectLinks>
                 </ItemWrapper>
 
@@ -378,12 +375,10 @@ const Profile = ({ data }) => {
               </ProjectItem>
               <img src={project.image} />
             </ProjectWrapper>
-          )}
+          ))}
         </Section>
 
-        <Title>
-          Education/Experience
-        </Title>
+        <Title>Education/Experience</Title>
 
         <Section>
           <SectionItem>
@@ -407,20 +402,26 @@ const Profile = ({ data }) => {
           </SectionItem>
         </Section>
 
-        <Title>
-          References
-        </Title>
+        <Title>References</Title>
         <Section>
           <SectionItem>
             <SubTitle>Blogs</SubTitle>
-              <ItemWrapper>
-                <ItemName><a href="https://benben.me" target="_blank">Personal blog</a></ItemName>
-                <ItemDescription>Record some note, reading experience .etc.</ItemDescription>
-              </ItemWrapper>
-              <ItemWrapper>
-                <ItemName><a href="https://blog.errorbaker.tw/" target="_blank">Collaborative blog</a></ItemName>
-                <ItemDescription>Collaborative blog with Lidemy classmates.</ItemDescription>
-              </ItemWrapper>
+            <ItemWrapper>
+              <ItemName>
+                <a href="https://benben.me" target="_blank">
+                  Personal blog
+                </a>
+              </ItemName>
+              <ItemDescription>Record some note, reading experience .etc.</ItemDescription>
+            </ItemWrapper>
+            <ItemWrapper>
+              <ItemName>
+                <a href="https://blog.errorbaker.tw/" target="_blank">
+                  Collaborative blog
+                </a>
+              </ItemName>
+              <ItemDescription>Collaborative blog with Lidemy classmates.</ItemDescription>
+            </ItemWrapper>
           </SectionItem>
         </Section>
       </ProfileWrapper>

@@ -103,10 +103,10 @@ export const StyledNavbar = styled.nav`
     cursor: pointer;
   }
   .buttons a {
-    padding: 1rem .5rem;
+    padding: 1rem 0.5rem;
     height: 2.5rem;
     color: #eee;
-    transition: .4s ease;
+    transition: 0.4s ease;
     &:hover {
       background: #eee;
       color: #333;
@@ -130,10 +130,11 @@ export const Wrapper = styled.div`
   min-height: calc(100vh - 2.5rem);
   display: grid;
   place-items: center center;
-  & > h2, & > p {
-    background: rgba(0,0,0,0.5);
+  & > h2,
+  & > p {
+    background: rgba(0, 0, 0, 0.5);
     color: #fff;
-    padding: .25rem .5rem;
+    padding: 0.25rem 0.5rem;
   }
 `
 
@@ -146,10 +147,11 @@ export const SectionWrapper = styled.div`
   br {
     margin: 2rem 0;
   }
-  & > h2, & > p {
-    background: rgba(255,255,255,0.3);
-    padding: .25rem .5rem;
-    transition: .3s .15s;
+  & > h2,
+  & > p {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 0.25rem 0.5rem;
+    transition: 0.3s 0.15s;
     font-weight: bold;
   }
   &:hover .btn {
@@ -183,8 +185,7 @@ export const HomepageTitle = styled.h1`
 export const HomepageTitleTyping = styled.h1`
   color: #fff;
   width: 0;
-  animation: ${typing} 4s steps(25) infinite,
-    ${blink} .5s step-end infinite alternate;
+  animation: ${typing} 4s steps(25) infinite, ${blink} 0.5s step-end infinite alternate;
   animation-delay: 1s;
   border-right: 3px solid;
   white-space: nowrap;
@@ -195,13 +196,13 @@ export const Card = styled.div`
   height: 250px;
   width: 320px;
   margin-top: 1rem;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   border-radius: 1rem;
-  box-shadow: 0 25px 25px rgba(0,0,0,0.3), inset 1px 1px 2px rgba(255, 255, 255, 0.2), inset -1px -1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.3), inset 1px 1px 2px rgba(255, 255, 255, 0.2), inset -1px -1px 3px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  border-top: 1px solid rgba(255,255,255,0.5);
-  transition: .5s;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  transition: 0.5s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -209,7 +210,7 @@ export const Card = styled.div`
   padding: 0 0 0 1rem;
   transform: scale(0.9) perspective(600px) rotateX(15deg);
   &:hover {
-    background: rgba(255,255,255,0.8);
+    background: rgba(255, 255, 255, 0.8);
     transform: scale(1.05) perspective(600px) rotateX(0deg);
   }
   .img {
@@ -219,7 +220,7 @@ export const Card = styled.div`
     overflow: hidden;
     background: linear-gradient(-45deg, #fff, #688);
     border-radius: 50%;
-    box-shadow: 0 0 6px 2px rgba(255,255,255,0.3), 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.3), 0 0 10px rgba(0, 0, 0, 0.2);
   }
   @media screen and (min-width: 750px) {
     width: 500px;
@@ -236,12 +237,12 @@ export const CardInfo = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: .5rem;
+  gap: 0.5rem;
   h3 {
     font-size: 1.5rem;
     border-bottom: 1px solid #333;
     margin-bottom: 1rem;
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
   }
   h3 > span {
     font-size: 1rem;
@@ -251,11 +252,11 @@ export const CardInfo = styled.div`
     display: inline-block;
     display: flex;
     place-items: center start;
-    gap: .25rem;
+    gap: 0.25rem;
   }
   @media screen and (min-width: 750px) {
     p {
-      gap: .5rem;
+      gap: 0.5rem;
     }
   }
 `
@@ -264,7 +265,8 @@ export const ButtonWrapper = styled.div`
   display: flex;
   gap: 2rem;
   @media screen and (max-width: 568px) {
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0rem;
   }
 `
 
@@ -273,21 +275,21 @@ export const Button = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: .7rem 1rem;
+  padding: 0.7rem 1rem;
   margin: 4rem auto 3rem;
-  border-radius: .2rem;
-  background: rgba(0,0,0,0.5);
+  border-radius: 0.2rem;
+  background: rgba(0, 0, 0, 0.5);
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: .4s;
+  transition: 0.4s;
   -webkit-box-reflect: below 3px linear-gradient(transparent 30%, #000 100%);
   @media screen and (max-width: 568px) {
     max-width: 8rem;
   }
   span {
     position: relative;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255, 255, 255, 0.6);
     z-index: 2;
   }
   &:hover {
@@ -298,7 +300,7 @@ export const Button = styled.div`
     position: absolute;
     background: #222;
     inset: 3px;
-    border-radius: .2rem;
+    border-radius: 0.2rem;
     z-index: 1;
   }
   &:hover::after {
@@ -316,9 +318,9 @@ export const AboutMe = styled.div`
   color: rgba(255, 255, 255, 0.8);
   margin: 2rem auto 3rem;
   gap: 1rem;
-  text-shadow: 0 0 5px rgba(255,255,255,0.5);
-  background: linear-gradient(45deg, rgba(0,0,10,0.8), rgba(0,50,50,0.8));
-  border-radius: .5rem;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(45deg, rgba(0, 0, 10, 0.8), rgba(0, 50, 50, 0.8));
+  border-radius: 0.5rem;
   padding: 2rem;
 `
 
@@ -326,15 +328,15 @@ export const AboutMe = styled.div`
 export const StyledProjectItem = styled.a`
   width: 300px;
   margin: 1.5rem;
-  border-radius: .8rem .8rem 0 0;
-  border-top: 1px solid rgba(255,255,255,0.5);
-  box-shadow: 0 25px 25px rgba(0,0,0,0.2), inset 1px 1px 2px rgba(255, 255, 255, 0.2), inset -1px -1px 3px rgba(0,0,0,0.2);
-  background: rgba(0,0,0,0.5);
+  border-radius: 0.8rem 0.8rem 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.2), inset 1px 1px 2px rgba(255, 255, 255, 0.2), inset -1px -1px 3px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   overflow: hidden;
   h3 {
     border-bottom: 1px solid #333;
-    margin: .5rem;
+    margin: 0.5rem;
   }
   p {
     position: absolute;
@@ -346,13 +348,13 @@ export const StyledProjectItem = styled.a`
     transform: translate(-50%, -50%);
     opacity: 0;
     z-index: 1;
-    transition: .3s .2s;
+    transition: 0.3s 0.2s;
   }
   img {
     width: 300px;
     height: 300px;
     object-fit: cover;
-    transition: .4s;
+    transition: 0.4s;
     vertical-align: bottom;
   }
   &:hover img {
@@ -380,7 +382,7 @@ export const SingleProjectWrapper = styled.div`
   gap: 1rem;
   padding: 1rem 2rem 2rem;
   margin: 2rem auto;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
   img {
     width: clamp(300px, 80%, 600px);
     object-fit: contain;
@@ -393,7 +395,7 @@ export const SingleProjectWrapper = styled.div`
     white-space: pre-line;
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 0.5rem;
   }
 `
 

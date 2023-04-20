@@ -10,5 +10,5 @@
       }
     ]
   ],
-  "plugins": [["@emotion/babel-plugin", { "ssr": true}]]
+  "plugins": [["@emotion/babel-plugin", { "ssr": true }]]
 }

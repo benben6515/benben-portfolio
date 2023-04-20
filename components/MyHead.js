@@ -12,4 +12,3 @@ function MyHead({ title }) {
 }
 
 export default MyHead
-

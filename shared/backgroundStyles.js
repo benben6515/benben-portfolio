@@ -55,17 +55,13 @@ export const Bubble = styled.span`
   border-radius: 50%;
   margin: 0 4px;
   background: ${bubbleColor1};
-  box-shadow: 0 0 0 6px ${bubbleColor1Shadow},
-    0 0 50px ${bubbleColor1},
-    0 0 100px ${bubbleColor1};
+  box-shadow: 0 0 0 6px ${bubbleColor1Shadow}, 0 0 50px ${bubbleColor1}, 0 0 100px ${bubbleColor1};
   animation: ${float} 15s linear infinite;
   animation-duration: ${(props) => props.animationDuration};
   animation-delay: ${(props) => props.animationDelay};
 
   &:nth-of-type(even) {
     background: ${bubbleColor2};
-    box-shadow: 0 0 0 6px ${bubbleColor2Shadow},
-      0 0 50px ${bubbleColor2},
-      0 0 100px ${bubbleColor2};
+    box-shadow: 0 0 0 6px ${bubbleColor2Shadow}, 0 0 50px ${bubbleColor2}, 0 0 100px ${bubbleColor2};
   }
 `

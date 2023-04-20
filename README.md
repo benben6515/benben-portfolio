@@ -1,24 +1,28 @@
-### benben 的作品集（portfolio）
+# benben's portfolio
 
-部這是一個關於我的「部落格式作品集」， 並附帶履歷表。
+This a project about my resume based on my projects and experience.
 
 [demo](https://benben-portfolio.vercel.app/)
 
 <img src="https://i.imgur.com/qqQWjxZ.gif" width="500">
 
-### 功能
-1. 可以查看個人作品集
-2. 每個作品有獨立的頁面
-3. 可以查看我的一頁式履歷表
-4. 因為是使用 Next.js 框架做的，所以自帶 SSR
-5. 可以打 API 取得我的資料
+## Feature
 
-### API endpoint
-- 履歷資料：https://benben-portfolio.vercel.app/api/benben
-- 作品資料：https://benben-portfolio.vercel.app/api/projects
-- 單一作品：https://benben-portfolio.vercel.app/api/projects/1
+1. Can check personal project
+2. There is a dependent page about each project
+3. Can check personal resume
+4. This project based on `Next.js` framework, using SSR
+5. Also can use `API` to get my data
 
-### 使用技術
-- Next.js\React
+## API endpoint
+
+- Resume data：<https://benben-portfolio.vercel.app/api/benben>
+- List of Project data：<https://benben-portfolio.vercel.app/api/projects>
+- Single of Project data：<https://benben-portfolio.vercel.app/api/projects/1>
+
+## Stack
+
+- Next.js/React
+- Express/Node
 - emotion
 - react-icons

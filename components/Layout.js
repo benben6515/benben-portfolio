@@ -4,13 +4,11 @@ import { Wrapper } from '../shared/styles'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
-function Layout({ children}) {
+function Layout({ children }) {
   return (
     <Wrapper>
       <Navbar />
-      <main>
-        {children}
-      </main>
+      <main>{children}</main>
       <Footer />
     </Wrapper>
   )

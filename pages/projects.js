@@ -20,7 +20,7 @@ import { projects as data } from '../data/data.tw'
 export const getStaticProps = async () => {
   return {
     props: {
-      data
-    }
+      data,
+    },
   }
 }

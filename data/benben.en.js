@@ -1,167 +1,172 @@
-
 export const benben = {
-  "name": "翁士育",
-  "englishName": "Benben",
-  "avatar": "https://i.imgur.com/YBhcWk1.png",
-  "phone": "(+886) 903106743",
-  "email": "(gmail) z2266109",
-  "github": "https://github.com/benben6515",
-  "blog": "https://benben6515.github.io/blog/",
-  "about": "Hi, I'm a Front-End developer from Taiwan. I like learn various Web skills with hands-on both React and Vue experience. Usually I'm a workaholic, but when I have free time I like reading book and writing blog",
-  "experience": [
+  name: '翁士育',
+  englishName: 'Benben',
+  avatar: '/images/avatar.png',
+  phone: '(+886) 903106743',
+  email: 'z2266109',
+  github: 'https://github.com/benben6515',
+  blog: 'https://benben6515.github.io/blog/',
+  about:
+    "Hi, I'm a Front-End developer from Taiwan. I like to learn various Web developing skills with hand-on both React and Vue experience. Usually, I'm a workaholic, but I like reading book and writing blog at my rest time, and coding of courses.",
+  experience: [
     {
-      "name": "Red Envelope - Front-End",
-      "time": "2021.11 ~ current"
+      name: 'Classcipe - Front-End',
+      time: '2021.01 ~ 2023.02',
+    },
+    {
+      name: 'Red Envelope - Front-End',
+      time: '2021.11 ~ 2023.02',
     },
     // {
     //   "name": "King-One Design - Front-End",
     //   "time": "2021.11 ~ 2022.02"
     // },
   ],
-  "education": [
+  education: [
     {
-      "name": "Lidemy - Trainer",
-      "time": "2021.04 ~ 2021.10"
+      name: 'Lidemy - Trainer',
+      time: '2021.04 ~ 2021.10',
     },
     {
-      "name": "Chung Yang University - Applied Math.",
-      "time": "2013.09 ~ 2018.06"
-    }
+      name: 'Chung Yang University - Applied Math.',
+      time: '2013.09 ~ 2018.06',
+    },
   ],
-  "skills": {
-    "HTMLandCSS": [
+  skills: {
+    HTMLandCSS: [
       {
-        "name": "CSS Selector",
-        "description": "familiar with HTML, CSS Selector. well knowing BEM naming"
+        name: 'CSS Selector',
+        description: 'familiar with HTML, CSS Selector. well knowing BEM naming',
       },
       {
-        "name": "CSS Layout",
-        "description": "well knowing layout attribute i.e. Float, Flex, Grid"
+        name: 'CSS Layout',
+        description: 'well knowing layout attribute i.e. Float, Flex, Grid',
       },
       {
-        "name": "SCSS/SASS",
-        "description": "use SCSS/SASS preprocessor to boost productivity"
+        name: 'SCSS/SASS',
+        description: 'use SCSS/SASS preprocessor to boost productivity',
       },
       {
-        "name": "UI library",
-        "description": "well understanding Bootstrap, tailwind .etc principle"
+        name: 'UI library',
+        description: 'well understanding Bootstrap, tailwind .etc principle',
       },
       {
-        "name": "CSS in JavaScript",
-        "description": "well knowing usage of styled-components, @emotion"
-      },
-    ],
-    "JavaScript": [
-      {
-        "name": "TypeScript",
-        "description": "experience of TypeScript development"
-      },
-      {
-        "name": "ES6",
-        "description": "familiar with native ES6 JavaScript syntax"
-      },
-      {
-        "name": "RESTful API",
-        "description": "using Fetch, async/await, axios to communicate with Back-End"
-      },
-      {
-        "name": "Basic Algorithm/Data Structure",
-        "description": "knowing algorithm / data Structure and keep learning"
-      },
-      {
-        "name": "JavaScript concept",
-        "description": "knowing advance JS concept i.e. this, closure, scope, prototype ..."
+        name: 'CSS in JavaScript',
+        description: 'well knowing usage of styled-components, @emotion',
       },
     ],
-    "Framework": [
+    JavaScript: [
       {
-        "name": "React",
-        "description": "familiar with React ecosystem, and hooks"
+        name: 'TypeScript',
+        description: 'experience of TypeScript development',
       },
       {
-        "name": "Vue",
-        "description": "familiar with Vue ecosystem, and composition API"
+        name: 'ES6',
+        description: 'familiar with native ES6 JavaScript syntax',
       },
       {
-        "name": "Redux/Vuex",
-        "description": "use Redux/Vuex to manage states, and use Redux toolkit / Pinia"
-      },
-    ],
-    "BackEnd": [
-      {
-        "name": "Back-End Framework",
-        "description": "use Node.js, Express to establish a Restful API server"
+        name: 'RESTful API',
+        description: 'using Fetch, async/await, axios to communicate with Back-End',
       },
       {
-        "name": "Deploy",
-        "description": "deploy on AWS EC2, Netify, Heroku .etc platform"
+        name: 'Basic Algorithm/Data Structure',
+        description: 'knowing algorithm / data Structure and keep learning',
       },
       {
-        "name": "Nginx, PM2",
-        "description": "take advantage of Nginx, PM2 to handle proxy http request"
+        name: 'JavaScript concept',
+        description: 'knowing advance JS concept i.e. this, closure, scope, prototype ...',
       },
     ],
-
-    "Database": [
+    Framework: [
       {
-        "name": "MySQL",
-        "description": "use MySQL for database, knowing different between SQL & noSQL"
+        name: 'React',
+        description: 'familiar with React ecosystem, and hooks',
       },
       {
-        "name": "Basic SQL query",
-        "description": "understanding SQL query syntax of 'CRUD'"
+        name: 'Vue',
+        description: 'familiar with Vue ecosystem, and composition API',
       },
       {
-        "name": "SQL injection, XSS ...",
-        "description": "knowing the common information security, and prevent them"
+        name: 'Redux/Vuex',
+        description: 'use Redux/Vuex to manage states, and use Redux toolkit / Pinia',
+      },
+    ],
+    BackEnd: [
+      {
+        name: 'Back-End Framework',
+        description: 'use Node.js, Express to establish a Restful API server',
       },
       {
-        "name": "Sequelize ORM",
-        "description": "take advantage of Sequelize ORM to operate database"
+        name: 'Deploy',
+        description: 'deploy on AWS EC2, Netify, Heroku .etc platform',
+      },
+      {
+        name: 'Nginx, PM2',
+        description: 'take advantage of Nginx, PM2 to handle proxy http request',
       },
     ],
 
-    "other": [
+    Database: [
       {
-        "name": "Git",
-        "description": "knowing common usage, includes rebase, cherry-pick .etc"
+        name: 'MySQL',
+        description: 'use MySQL for database, knowing different between SQL & noSQL',
       },
       {
-        "name": "IDE",
-        "description": "daily IED is VScode with 'Vim' plugin which boost productivity"
+        name: 'Basic SQL query',
+        description: "understanding SQL query syntax of 'CRUD'",
       },
       {
-        "name": "Package Management",
-        "description": "use npm, yarn, pnpm to manage libraries"
+        name: 'SQL injection, XSS ...',
+        description: 'knowing the common information security, and prevent them',
       },
       {
-        "name": "Bundler",
-        "description": "use webpack, vite to bundle project"
+        name: 'Sequelize ORM',
+        description: 'take advantage of Sequelize ORM to operate database',
       },
-    ]
+    ],
+
+    other: [
+      {
+        name: 'Git',
+        description: 'knowing common usage, includes rebase, cherry-pick .etc',
+      },
+      {
+        name: 'IDE',
+        description: "daily IED is VScode with 'Vim' plugin which boost productivity",
+      },
+      {
+        name: 'Package Management',
+        description: 'use npm, yarn, pnpm to manage libraries',
+      },
+      {
+        name: 'Bundler',
+        description: 'use webpack, vite to bundle project',
+      },
+    ],
   },
-  "projects": [
+  projects: [
     {
-      "name": "Z-axis",
-      "demo": "https://zaxis.netlify.app/#/",
-      "repo": "https://github.com/angelina524/final-project-Z-axis-frontend/tree/dev",
-      "image": "https://user-images.githubusercontent.com/61361198/136129383-66df350c-7f8a-454e-9f51-dcbe7d916310.gif",
-      "youtube": "https://youtu.be/-sDzeKgKeGw",
-      "record": "https://hackmd.io/@benben6515/H1-rEQb8_",
-      "details": [
+      name: 'Z-axis',
+      demo: 'https://zaxis.netlify.app/#/',
+      repo: 'https://github.com/angelina524/final-project-Z-axis-frontend/tree/dev',
+      image: 'https://user-images.githubusercontent.com/61361198/136129383-66df350c-7f8a-454e-9f51-dcbe7d916310.gif',
+      youtube: 'https://youtu.be/-sDzeKgKeGw',
+      record: 'https://hackmd.io/@benben6515/H1-rEQb8_',
+      details: [
         {
-          "name": "Project brief",
-          "description": "The Final Project In Lidemy bootcamp. I was in charge of layout, integrating Socket.io in both Front-end and Back-end, deployment on AWS EC2。"
+          name: 'Project brief',
+          description:
+            'The Final Project In Lidemy bootcamp. I was in charge of layout, integrating Socket.io in both Front-end and Back-end, deployment on AWS EC2。',
         },
         {
-          "name": "Front-End",
-          "description": "Developed project with React, Socket.IO, and deployed on Netlify."
+          name: 'Front-End',
+          description: 'Developed project with React, Socket.IO, and deployed on Netlify.',
         },
         {
-          "name": "Back-End",
-          "description": "Developed project with Express, Sequelize, Socket.IO, deployed on AWS EC2, and AWS RDS - MySQL database."
-        }
-      ]
+          name: 'Back-End',
+          description: 'Developed project with Express, Sequelize, Socket.IO, deployed on AWS EC2, and AWS RDS - MySQL database.',
+        },
+      ],
     },
     // {
     //   "name": "Benben-portfolio",
@@ -185,49 +190,53 @@ export const benben = {
     //     }
     //   ]
     // },
-    // {
-    //   "name": "Gigabyte-industry",
-    //   "demo": "https://industry.gigabyte.com",
-    //   "repo": "",
-    //   "youtube": "https://www.youtube.com/channel/UCM_VXTttz39aJwPM2oBrIzQ",
-    //   "image": "https://i.imgur.com/K2AGfUP.gif",
-    //   "record": "",
-    //   "details": [
-    //     {
-    //       "name": "Project Brief",
-    //       "description": "The project for customer's marketing purpose. There are considerable interactive effect with 3D models. Also it is multilingual web page. I was in charge of whole Front-End part"
-    //     },
-    //     {
-    //       "name": "Tech Stack",
-    //       "description": "Developed with Vue, Pug/Sass, Babylon.js(3D framework) in front-end. Back-End developed with Laravel by back-end developers."
-    //     },
-    //     {
-    //       "name": "Development Process",
-    //       "description": "The project was created when I was in the King-One Design Company. I was responsible for whole front-end part. Communicated with PM, Designer, Back-End and even client, to resolved occurred problems. Development schedule was about one month, and I was responsible for maintain this project"
-    //     }
-    //   ]
-    // },
     {
-      "name": "APEC 2021 Event",
-      "demo": "https://apec2021-rec-renewable-energy.com/event",
-      "repo": "",
-      "youtube": "https://www.youtube.com/watch?v=u6AwnvPZ_6s",
-      "image": "https://hackmd.io/_uploads/rkzi2USbo.gif",
-      "record": "",
-      "details": [
+      name: 'Gigabyte-industry',
+      demo: 'https://industry.gigabyte.com',
+      repo: '',
+      youtube: 'https://www.youtube.com/channel/UCM_VXTttz39aJwPM2oBrIzQ',
+      image: 'https://i.imgur.com/K2AGfUP.gif',
+      record: '',
+      details: [
         {
-          "name": "Project Brief",
-          "description": "The project for customer's event purpose. There are considerable interactive fancy effects. Also it is multilingual web page. I was in charge of whole Front-End part."
+          name: 'Project Brief',
+          description:
+            "The project for customer's marketing purpose. There are considerable interactive effect with 3D models. Also it is multilingual web page. I was in charge of whole Front-End part",
         },
         {
-          "name": "Tech Stack",
-          "description": "Developed with Vue, Pug/Sass in front-end. Back-End developed with Laravel by back-end developers."
+          name: 'Tech Stack',
+          description: 'Developed with Vue, Pug/Sass, Babylon.js(3D framework) in front-end. Back-End developed with Laravel by back-end developers.',
         },
         {
-          "name": "Development Process",
-          "description": "This project is re-build project with add new feature in old project. I response for all task, adding new technology and meanwhile maintain old parts."
-        }
-      ]
-    }
-  ]
+          name: 'Development Process',
+          description:
+            'The project was created when I was in the King-One Design Company. I was responsible for whole front-end part. Communicated with PM, Designer, Back-End and even client, to resolved occurred problems. Development schedule was about one month, and I was responsible for maintain this project',
+        },
+      ],
+    },
+    {
+      name: 'APEC 2021 Event',
+      demo: 'https://apec2021-rec-renewable-energy.com/event',
+      repo: '',
+      youtube: 'https://www.youtube.com/watch?v=u6AwnvPZ_6s',
+      image: 'https://hackmd.io/_uploads/rkzi2USbo.gif',
+      record: '',
+      details: [
+        {
+          name: 'Project Brief',
+          description:
+            "The project for customer's event purpose. There are considerable interactive fancy effects. Also it is multilingual web page. I was in charge of whole Front-End part.",
+        },
+        {
+          name: 'Tech Stack',
+          description: 'Developed with Vue, Pug/Sass in front-end. Back-End developed with Laravel by back-end developers.',
+        },
+        {
+          name: 'Development Process',
+          description:
+            'This project is re-build project with add new feature in old project. I response for all task, adding new technology and meanwhile maintain old parts.',
+        },
+      ],
+    },
+  ],
 }

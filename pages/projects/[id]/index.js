@@ -3,7 +3,7 @@ import Link from 'next/link'
 import MyHead from '../../../components/MyHead'
 import { SiGithub } from 'react-icons/si'
 import { MdWebAsset } from 'react-icons/md'
-import { SingleProjectWrapper, LinksWrapper, StackWrapper  } from '../../../shared/styles'
+import { SingleProjectWrapper, LinksWrapper, StackWrapper } from '../../../shared/styles'
 
 const project = ({ project }) => {
   return (
@@ -15,13 +15,23 @@ const project = ({ project }) => {
         <img src={project.image} />
 
         <LinksWrapper>
-          <a href={project.demo} target="_blank"><p><MdWebAsset />Demo</p></a>
-          <a href={project.repo} target="_blank"><p><SiGithub />GitHub</p></a>
+          <a href={project.demo} target="_blank">
+            <p>
+              <MdWebAsset />
+              Demo
+            </p>
+          </a>
+          <a href={project.repo} target="_blank">
+            <p>
+              <SiGithub />
+              GitHub
+            </p>
+          </a>
         </LinksWrapper>
 
         <h3>使用技術：</h3>
         <StackWrapper>
-          {project.stack.map(e => (
+          {project.stack.map((e) => (
             <p key={e.name}>{e.name}</p>
           ))}
         </StackWrapper>
@@ -31,7 +41,9 @@ const project = ({ project }) => {
 
         <h3>詳細描述：</h3>
         <p>{project.detail}</p>
-        <p><Link href='/projects'>🔙 Go back</Link></p>
+        <p>
+          <Link href="/projects">🔙 Go back</Link>
+        </p>
       </SingleProjectWrapper>
     </>
   )
@@ -43,15 +55,15 @@ export const getStaticProps = async (context) => {
   const project = projects[context.params.id - 1]
   return {
     props: {
-      project
-    }
+      project,
+    },
   }
 }
 
 export const getStaticPaths = async () => {
-  const ids = projects.map(project => project.id)
-  const paths = ids.map(id => ({
-    params: {id: id.toString()}
+  const ids = projects.map((project) => project.id)
+  const paths = ids.map((id) => ({
+    params: { id: id.toString() },
   }))
 
   return {

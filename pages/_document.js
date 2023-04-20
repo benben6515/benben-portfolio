@@ -12,10 +12,7 @@ export default class AppDocument extends Document {
       styles: (
         <React.Fragment>
           {initialProps.styles}
-          <style
-            data-emotion={`css ${ids.join(' ')}`}
-            dangerouslySetInnerHTML={{ __html: css }}
-          />
+          <style data-emotion={`css ${ids.join(' ')}`} dangerouslySetInnerHTML={{ __html: css }} />
         </React.Fragment>
       ),
     }
