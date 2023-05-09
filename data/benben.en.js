@@ -11,7 +11,7 @@ export const benben = {
   experience: [
     {
       name: 'Classcipe - Front-End',
-      time: '2021.01 ~ 2023.02',
+      time: '2022.12 ~ present',
     },
     {
       name: 'Red Envelope - Front-End',
