@@ -185,7 +185,9 @@ export const HomepageTitle = styled.h1`
 export const HomepageTitleTyping = styled.h1`
   color: #fff;
   width: 0;
-  animation: ${typing} 4s steps(25) infinite, ${blink} 0.5s step-end infinite alternate;
+  animation:
+    ${typing} 4s steps(25) infinite,
+    ${blink} 0.5s step-end infinite alternate;
   animation-delay: 1s;
   border-right: 3px solid;
   white-space: nowrap;
@@ -199,7 +201,10 @@ export const Card = styled.div`
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   border-radius: 1rem;
-  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.3), inset 1px 1px 2px rgba(255, 255, 255, 0.2), inset -1px -1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 25px 25px rgba(0, 0, 0, 0.3),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.2),
+    inset -1px -1px 3px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   transition: 0.5s;
@@ -220,7 +225,9 @@ export const Card = styled.div`
     overflow: hidden;
     background: linear-gradient(-45deg, #fff, #688);
     border-radius: 50%;
-    box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.3), 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow:
+      0 0 6px 2px rgba(255, 255, 255, 0.3),
+      0 0 10px rgba(0, 0, 0, 0.2);
   }
   @media screen and (min-width: 750px) {
     width: 500px;
@@ -293,7 +300,10 @@ export const Button = styled.div`
     z-index: 2;
   }
   &:hover {
-    box-shadow: 0 0 10px #4ac, 0 0 20px #4ac, 0 0 30px #4ac;
+    box-shadow:
+      0 0 10px #4ac,
+      0 0 20px #4ac,
+      0 0 30px #4ac;
   }
   &::after {
     content: '';
@@ -325,12 +335,15 @@ export const AboutMe = styled.div`
 `
 
 // projects list page
-export const StyledProjectItem = styled.a`
+export const StyledProjectItem = styled.span`
   width: 300px;
   margin: 1.5rem;
   border-radius: 0.8rem 0.8rem 0 0;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.2), inset 1px 1px 2px rgba(255, 255, 255, 0.2), inset -1px -1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 25px 25px rgba(0, 0, 0, 0.2),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.2),
+    inset -1px -1px 3px rgba(0, 0, 0, 0.2);
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   overflow: hidden;

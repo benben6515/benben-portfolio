@@ -61,7 +61,7 @@ export default function Home({ data }) {
       </SectionWrapper>
 
       <AboutMe>
-        <img src="https://i.imgur.com/jYTOeTV.png" width={150} alt="qrCode" />
+        <img src="/images/qr-code.png" width={150} alt="qrCode" />
         <h3>About me</h3>
         <p>
           A passion, keeping learning Front-End developer who was born in 1995. Love sharing technology and like open source culture. I like learning on CS50,

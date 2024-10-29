@@ -66,7 +66,7 @@ const IconWrapper = styled.section`
   }
 `
 
-const IconItem = styled.div`
+const IconItem = styled.span`
   width: 2.5rem;
   height: 2.5rem;
   display: grid;
@@ -74,7 +74,10 @@ const IconItem = styled.div`
   text-align: center;
   border-radius: 50%;
   background: #fafafa;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2), inset 2px 2px 5px rgba(255, 255, 255, 1), inset -2px -2px 5px rgba(255, 255, 255, 0.8);
+  box-shadow:
+    1px 1px 5px rgba(0, 0, 0, 0.2),
+    inset 2px 2px 5px rgba(255, 255, 255, 1),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.8);
   filter: brightness(1);
   transition: 0.3s;
   cursor: pointer;
@@ -161,6 +164,7 @@ const ItemName = styled.p`
 
 const ItemDescription = styled.p`
   font-size: 0.75rem;
+  white-space: pre-line;
   color: #444;
 `
 
@@ -200,9 +204,9 @@ const Profile = ({ data }) => {
       <IconWrapper>
         <Link href="/">
           <IconItem>
-            <a>
+            <span>
               <AiOutlineRollback />
-            </a>
+            </span>
           </IconItem>
         </Link>
         <IconItem>
@@ -345,7 +349,7 @@ const Profile = ({ data }) => {
 
         <Section>
           {projects.map((project, idx) => (
-            <ProjectWrapper>
+            <ProjectWrapper key={project.name}>
               <ProjectItem>
                 <SubTitle>
                   {idx + 1}. {project.name}
@@ -393,6 +397,7 @@ const Profile = ({ data }) => {
               <ItemWrapper key={e.name}>
                 <ItemName>{e.name}</ItemName>
                 <ItemDescription>{e.time}</ItemDescription>
+                <ItemDescription>{e.description}</ItemDescription>
               </ItemWrapper>
             ))}
           </SectionItem>
@@ -402,6 +407,7 @@ const Profile = ({ data }) => {
               <ItemWrapper key={e.name}>
                 <ItemName>{e.name}</ItemName>
                 <ItemDescription>{e.time}</ItemDescription>
+                <ItemDescription>{e.description}</ItemDescription>
               </ItemWrapper>
             ))}
           </SectionItem>

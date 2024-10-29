@@ -10,26 +10,59 @@ export const benben = {
     '你好！我是一個前端開發者，喜歡研究各種 Web 技術，目前沉浸在 Vue, React 的生態圈，有點小學習狂、工作狂，平時喜歡閱讀書藉、寫寫部落格，當然還有寫寫 code。',
   experience: [
     {
-      name: 'Classcipe - 前端工程師',
-      time: '2022.12 ~ current',
+      name: 'Classcipe - Front-end team Lead',
+      time: '2023.02 ~ current',
+      description: `
+- 帶領 2 ~ 3 位前端工程師
+- 從 0 到 1 打造產品
+- 統一前端專案的 coding style
+- 與後端規畫 Api, model
+- 重構專案 Vue 2 到 Vue 3
+- 優化使用大量元素的頁面，載入速度提升 300%
+`,
     },
     {
       name: 'RE 紅包 - 前端工程師',
-      time: '2021.11 ~ 2023.02',
+      time: '2022.02 ~ 2023.02',
+      description: `
+- 負責所有前端事務
+- 主動分享技術，如： TypeScript, Vim
+- 統一所有前端專案的 coding style
+- 重構部分專案 Vue 2 到 Vue 3
+- 與 CTO 討論新 features
+`,
     },
-    // {
-    //   "name": "王一設計 - 前端工程師",
-    //   "time": "2021.11 ~ 2022.02"
-    // },
+    {
+      name: '王一設計 - 前端工程師',
+      time: '2021.11 ~ 2022.02',
+      description: `
+- 使用 Vue 重 0 到 1 完成新專案
+- 獨立完成前端專案，為公司帶來超過百萬的收入（提升 10% 年營業額）
+- 快速解理專案，並加入支援
+- 導入 Tailwind CSS 快速開發前端
+- 維護數個 React, Vue 專案
+`,
+    },
   ],
   education: [
     {
       name: 'Lidemy 程式導師計畫 - 第五期',
       time: '2021.04 ~ 2021.10',
+      description: `
+- 跟前端大師學習，半年時間全職衝刺
+- 完整前、後端學習計劃
+- 唯一 180 天無間斷繳交學習進度
+- 深度學習同時廣度學習，期間還持繼自學，如：CS50、Udemy
+`,
     },
     {
       name: '中原大學 - 應用數學系',
       time: '2013.09 ~ 2018.06',
+      description: `
+- 大一獲得「新生教育獎」數學滿級分
+- 大二開始半工半讀人生
+- 大三擔任熱音社 - 攝影長
+`,
     },
   ],
   skills: {
@@ -149,7 +182,7 @@ export const benben = {
       name: 'Z-axis',
       demo: 'https://zaxis.netlify.app/#/',
       repo: 'https://github.com/angelina524/final-project-Z-axis-frontend/tree/dev',
-      image: 'https://user-images.githubusercontent.com/61361198/136129383-66df350c-7f8a-454e-9f51-dcbe7d916310.gif',
+      image: '/images/projects/large-project-1.gif',
       youtube: 'https://youtu.be/-sDzeKgKeGw',
       record: 'https://hackmd.io/@benben6515/H1-rEQb8_',
       details: [
@@ -194,7 +227,7 @@ export const benben = {
       demo: 'https://industry.gigabyte.com',
       repo: '',
       youtube: 'https://www.youtube.com/channel/UCM_VXTttz39aJwPM2oBrIzQ',
-      image: 'https://i.imgur.com/K2AGfUP.gif',
+      image: '/images/projects/large-project-2.gif',
       record: '',
       details: [
         {
@@ -217,7 +250,7 @@ export const benben = {
       demo: 'https://apec2021-rec-renewable-energy.com/event',
       repo: '',
       youtube: 'https://www.youtube.com/watch?v=u6AwnvPZ_6s',
-      image: 'https://hackmd.io/_uploads/rkzi2USbo.gif',
+      image: '/images/projects/large-project-3.gif',
       record: '',
       details: [
         {

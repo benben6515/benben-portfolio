@@ -1,11 +1,8 @@
-// TODO: add data.en.js file
-
 export const projects = [
   {
     id: '1',
     title: 'React/Redux Blog',
-    image:
-      'https://camo.githubusercontent.com/e209a9701bc0c6654eaf90e8a30d4e55658e5144016299f81b3ee090267cbe07/68747470733a2f2f692e696d6775722e636f6d2f7334335153736f2e676966',
+    image: '/images/projects/project-1.gif',
     demo: 'https://benben6515.github.io/redux-blog/',
     repo: 'https://github.com/benben6515/redux-blog',
     description: '使用 Redux toolkit 做的 Blog，可以新增、修改、刪除文章，並有會員系統可以註冊、登入。',
@@ -29,8 +26,7 @@ export const projects = [
   {
     id: '2',
     title: 'React/Redux Todo List',
-    image:
-      'https://camo.githubusercontent.com/534b2380369d002b4300c6ed3d680723a2351f43ae127e37678afad96a1e8403/68747470733a2f2f692e696d6775722e636f6d2f6b3541657050372e676966',
+    image: '/images/projects/project-2.gif',
     demo: 'https://benben6515.github.io/redux-todo/',
     repo: 'https://github.com/benben6515/redux-todo',
     description: '這是一個使用 Redux toolkit 做的 Todo List，可以新增、修改、刪除。',
@@ -51,7 +47,7 @@ export const projects = [
   {
     id: '3',
     title: 'React Gobang',
-    image: 'https://i.imgur.com/IjGmwPc.gif',
+    image: '/images/projects/project-3.gif',
     demo: 'https://benben6515.github.io/react-gobang/',
     repo: 'https://github.com/benben6515/react-gobang',
     description: 'React 五子棋，會隨著當前玩家變色，也可以反回步數，跟重播下棋過程。',
@@ -72,7 +68,7 @@ export const projects = [
   {
     id: '4',
     title: 'Express/Sequelize Lottery',
-    image: 'https://i.imgur.com/Tx09nZK.gif',
+    image: '/images/projects/project-4.gif',
     demo: 'https://limitless-reef-07762.herokuapp.com/',
     repo: 'https://limitless-reef-07762.herokuapp.com/',
     description: '使用 Express 跟 Sequelize 做的抽獎器，可以抽獎並設定獎品名稱跟中獎機率。',
@@ -93,7 +89,7 @@ export const projects = [
   {
     id: '5',
     title: 'Bootstrap/Slide effects',
-    image: 'https://i.imgur.com/exyXFUI.gif',
+    image: '/images/projects/project-5.gif',
     demo: 'https://benben-bootstrap-skroller.netlify.app/',
     repo: 'https://github.com/benben6515/bootstrap-skroller',
     description: '用 Bootstrap 結合 skroller.js 捲動效果的網頁。',
@@ -114,7 +110,7 @@ export const projects = [
   {
     id: '6',
     title: 'Live Chat',
-    image: 'https://i.imgur.com/gsPDyE8.gif',
+    image: '/images/projects/project-6.gif',
     demo: 'http://live-chat.ben6515.tw/',
     repo: 'https://github.com/benben6515/live-chat',
     description: '使用 React, Socket.io 跟 Tailwind 打造的即時聊天應用程式。',

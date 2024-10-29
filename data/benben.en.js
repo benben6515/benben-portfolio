@@ -11,25 +11,57 @@ export const benben = {
   experience: [
     {
       name: 'Classcipe - Front-End',
-      time: '2022.12 ~ present',
+      time: '2023.02 ~ present',
+      description: `
+- Lead 2 to 3 front-end developers
+- Start from scratch to build up projects
+- Unify the coding style of front-end projects
+- Refactor projects from Vue 2 to Vue 3
+- Optimize pages with many elements, speed up loaing time 300%
+`,
     },
     {
       name: 'Red Envelope - Front-End',
-      time: '2021.11 ~ 2023.02',
+      time: '2021.02 ~ 2023.02',
+      description: `
+- Respond to all front-end related business
+- Actively share knowledge, such as: TypeScript, Vim
+- Unify the coding style of front-end projects
+- Refactor projects from Vue 2 to Vue 3
+- Discuss new features with the CTO
+`,
     },
-    // {
-    //   "name": "King-One Design - Front-End",
-    //   "time": "2021.11 ~ 2022.02"
-    // },
+    {
+      name: 'King-One Design - Front-End',
+      time: '2021.11 ~ 2022.02',
+      description: `
+- Start from scratch to build projects using Vue
+- Bring over one million for the company by completing projects independently (boost 10% of annual turnover)
+- Learn new projects promptly and join to support other developers
+- Introduce Tailwind CSS to speed up the development of the front-end
+- Maintain several projects in React and Vue
+`,
+    },
   ],
   education: [
     {
       name: 'Lidemy - Trainer',
       time: '2021.04 ~ 2021.10',
+      description: `
+- Learn from front-end masters and sprint full-time in half a year
+- Complete front-end and back-end learning plan
+- The only 180-day uninterrupted payment of learning progress
+- Deep learning and breadth learning at the same time, and continuous self-study during this period, such as: CS50, Udemy
+`,
     },
     {
       name: 'Chung Yang University - Applied Math.',
       time: '2013.09 ~ 2018.06',
+      description: `
+- Received the "Freshman Education Award" as a freshman by got full score in Math
+- Started a part-time work-study life in my sophomore year
+- In junior year, served as chief photographer of Hot music Club
+`,
     },
   ],
   skills: {
@@ -149,7 +181,7 @@ export const benben = {
       name: 'Z-axis',
       demo: 'https://zaxis.netlify.app/#/',
       repo: 'https://github.com/angelina524/final-project-Z-axis-frontend/tree/dev',
-      image: 'https://user-images.githubusercontent.com/61361198/136129383-66df350c-7f8a-454e-9f51-dcbe7d916310.gif',
+      image: '/images/projects/large-project-1.gif',
       youtube: 'https://youtu.be/-sDzeKgKeGw',
       record: 'https://hackmd.io/@benben6515/H1-rEQb8_',
       details: [
@@ -195,7 +227,7 @@ export const benben = {
       demo: 'https://industry.gigabyte.com',
       repo: '',
       youtube: 'https://www.youtube.com/channel/UCM_VXTttz39aJwPM2oBrIzQ',
-      image: 'https://i.imgur.com/K2AGfUP.gif',
+      image: '/images/projects/large-project-2.gif',
       record: '',
       details: [
         {
@@ -219,7 +251,7 @@ export const benben = {
       demo: 'https://apec2021-rec-renewable-energy.com/event',
       repo: '',
       youtube: 'https://www.youtube.com/watch?v=u6AwnvPZ_6s',
-      image: 'https://hackmd.io/_uploads/rkzi2USbo.gif',
+      image: '/images/projects/large-project-3.gif',
       record: '',
       details: [
         {
