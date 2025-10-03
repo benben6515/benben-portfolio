@@ -11,14 +11,13 @@ export const benben = {
   experience: [
     {
       name: 'Classcipe - Front-end team Lead',
-      time: '2023.02 ~ current',
+      time: '2023.02 ~ 2025.08',
       description: `
 - 帶領 2 ~ 3 位前端工程師
 - 從 0 到 1 打造產品
-- 統一前端專案的 coding style
-- 與後端規畫 Api, model
+- 與後端規劃 Api, Model
 - 重構專案 Vue 2 到 Vue 3
-- 優化使用大量元素的頁面，載入速度提升 300%
+- 優化使用大量元件的頁面，載入速度提升 300%
 `,
     },
     {

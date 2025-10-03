@@ -11,13 +11,13 @@ export const benben = {
   experience: [
     {
       name: 'Classcipe - Front-End',
-      time: '2023.02 ~ present',
+      time: '2023.02 ~ 2025.08',
       description: `
 - Lead 2 to 3 front-end developers
 - Start from scratch to build up projects
 - Unify the coding style of front-end projects
 - Refactor projects from Vue 2 to Vue 3
-- Optimize pages with many elements, speed up loaing time 300%
+- Optimize pages with many components, speeding up loading time by 300%
 `,
     },
     {
