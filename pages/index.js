@@ -63,10 +63,11 @@ export default function Home({ data }) {
       <AboutMe>
         <img src="/images/qr-code.png" width={150} alt="qrCode" />
         <h3>About me</h3>
+        <h3>#Front-End🧙🏼 #Vim⚡ #Reading📚</h3>
+        <br />
         <p>
-          A passionate, continuously learning Front-End developer who was born in 1995. I love sharing technology and appreciate open-source culture. I enjoy
-          learning online course like CS50, MIT OpenCourse. I have hands-on experience with two Front-End frameworks (React/Vue). I look forward to developing
-          awesome products.
+          A passionate, continuously learning Front-End developer who was born in 1995. I love sharing technology and appreciate open-source culture. I have
+          hands-on experience with two Front-End frameworks (React/Vue). I look forward to developing awesome products.
         </p>
         <br />
         <p>
@@ -83,7 +84,7 @@ export default function Home({ data }) {
           There are so many front-end developers, but very few are outstanding. If you think I am the candidate you are looking for, feel free to contact me.
         </p>
         <br />
-        <p>ps. If you meet a developer with Vim (not necessarily me), just hire this guy!</p>
+        <p>ps. If you meet a developer with Vim, consider hire this guy!</p>
       </AboutMe>
     </>
   )
