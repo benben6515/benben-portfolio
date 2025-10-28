@@ -52,7 +52,7 @@ const project = ({ project }) => {
 import { projects } from '../../../data/data.tw'
 
 export const getStaticProps = async (context) => {
-  const project = projects[context.params.id - 1]
+  const project = projects.find((e) => `${e.id}` === `${context.params.id}`)
   return {
     props: {
       project,

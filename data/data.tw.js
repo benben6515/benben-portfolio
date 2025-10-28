@@ -88,30 +88,9 @@ export const projects = [
   },
   {
     id: '5',
-    title: 'Bootstrap/Slide effects',
-    image: '/images/projects/project-5.gif',
-    demo: 'https://benben-bootstrap-skroller.netlify.app/',
-    repo: 'https://github.com/benben6515/bootstrap-skroller',
-    description: '用 Bootstrap 結合 skroller.js 捲動效果的網頁。',
-    detail:
-      '原本是在 codepen 平台開發，後來移植到 Netlify，\n 使用了 Pug （HTML 預處理器）/ SCSS（CSS 預處理器）開發，\n 並搭配了 Bootstrap ，體驗到了快速開發的感覺，\n 少少的 code 就能達到想要的畫面， \n 加上 skroller.js 打造出一個滑動效果的網頁。\n\n 小彩蛋：其他 codepen 小作品 https://codepen.io/collection/nZwLNw ',
-    stack: [
-      {
-        name: 'Pug/SCSS',
-      },
-      {
-        name: 'Bootstrap',
-      },
-      {
-        name: 'skroller.js',
-      },
-    ],
-  },
-  {
-    id: '6',
     title: 'Live Chat',
-    image: '/images/projects/project-6.gif',
-    demo: 'http://live-chat.ben6515.tw/',
+    image: '/images/projects/project-5.gif',
+    demo: 'https://chat.benben.me/',
     repo: 'https://github.com/benben6515/live-chat',
     description: '使用 React, Socket.io 跟 Tailwind 打造的即時聊天應用程式。',
     detail:
@@ -131,4 +110,55 @@ export const projects = [
       },
     ],
   },
-]
+  {
+    id: '6',
+    title: 'Notion progress bar',
+    image: '/images/projects/project-6.gif',
+    demo: 'https://progress-maker.benben.me',
+    repo: 'https://github.com/benben6515/notion-tool',
+    description: '使用 React, Tailwind 做的 Notion 進度條生成器',
+    detail:
+      '在 Notion 社群中，因為社群的朋友需要，自發地與另一位友人一起開發的小作品，免費供大家使用。\n可以快速生成 Notion 進度條的公式，可以客製化，並有中/英語系的切換。\n\n 小彩蛋：可以切換深/淺色模式 🌜🔅',
+    stack: [
+      {
+        name: 'React',
+      },
+      {
+        name: 'Tailwind',
+      },
+      {
+        name: 'Vite',
+      },
+      {
+        name: 'i18n',
+      },
+    ],
+  },
+  {
+    id: '7',
+    title: '嘸蝦米 - 兩字練習器',
+    image: '/images/projects/project-7.gif',
+    demo: 'https://dev.benben.me/learn-two-code-word',
+    repo: '',
+    description: '使用 Vue, Vite 與 AI 工具協作完成的小專案',
+    detail:
+      '在嘸蝦米臺灣的社群中，因為自己也很喜歡嘸蝦米輸入法，並且想要更上一層樓而寫的專案。\n主動在社群分享，打中了速度突破的痛點，拿到大多好評，並持續更新新功能。\n\n 小彩蛋：完成的話會有彩帶互動 🎊',
+    stack: [
+      {
+        name: 'Vue',
+      },
+      {
+        name: 'Vite',
+      },
+      {
+        name: 'AI (Cursor)',
+      },
+    ],
+  },
+].sort((a, b) => {
+  const aId = +a.id
+  const bId = +b.id
+  if (aId < bId) return 1
+  else if (aId > bId) return -1
+  return 0
+})
