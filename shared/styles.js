@@ -335,21 +335,22 @@ export const AboutMe = styled.div`
 `
 
 // projects list page
-export const StyledProjectItem = styled.span`
-  width: 300px;
-  margin: 1.5rem;
+export const StyledProjectItem = styled.div`
+  width: 20rem;
   border-radius: 0.8rem 0.8rem 0 0;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow:
     0 25px 25px rgba(0, 0, 0, 0.2),
     inset 1px 1px 2px rgba(255, 255, 255, 0.2),
     inset -1px -1px 3px rgba(0, 0, 0, 0.2);
-  background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
+  background: rgba(50, 50, 50, 0.25);
   overflow: hidden;
   h3 {
     border-bottom: 1px solid #333;
     margin: 0.5rem;
+    padding-left: 0.5rem;
+    color: #aef;
   }
   p {
     position: absolute;
@@ -364,8 +365,8 @@ export const StyledProjectItem = styled.span`
     transition: 0.3s 0.2s;
   }
   img {
-    width: 300px;
-    height: 300px;
+    width: 20rem;
+    height: 20rem;
     object-fit: cover;
     transition: 0.4s;
     vertical-align: bottom;

@@ -135,23 +135,20 @@ export const projects = [
     ],
   },
   {
-    id: '7',
-    title: '嘸蝦米 - 兩字練習器',
-    image: '/images/projects/project-7.gif',
-    demo: 'https://dev.benben.me/learn-two-code-word',
+    id: '8',
+    title: '迷宮演算法視覺化',
+    image: '/images/projects/project-8.gif',
+    demo: 'https://dev.benben.me/pathfinding',
     repo: '',
-    description: '使用 Vue, Vite 與 AI 工具協作完成的小專案',
+    description: '使用 Vue, Vite 打造的小專案',
     detail:
-      '在嘸蝦米臺灣的社群中，因為自己也很喜歡嘸蝦米輸入法，並且想要更上一層樓而寫的專案。\n主動在社群分享，打中了速度突破的痛點，拿到大多好評，並持續更新新功能。\n\n 小彩蛋：完成的話會有彩帶互動 🎊',
+      '在學習演算法的時候，非常喜歡迷宮類型的題目。\n因為看過「排序」演算法的視覺化，所以就做了這個迷宮視覺化，一方面練習演算法、一方面練習前端。\n\n 小彩蛋：迷宮是真的隨機生成的 🧙🏼',
     stack: [
       {
         name: 'Vue',
       },
       {
         name: 'Vite',
-      },
-      {
-        name: 'AI (Cursor)',
       },
     ],
   },
