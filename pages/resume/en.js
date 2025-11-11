@@ -109,12 +109,12 @@ const Section = styled.section`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 2rem 1.5rem;
 `
 
 const SectionItem = styled.div`
-  width: 236px;
-  margin-left: 1rem;
+  width: 230px;
+  margin-left: 0.5rem;
   @media print {
     margin-left: 0rem;
   }
@@ -290,7 +290,7 @@ const Profile = ({ data }) => {
               Framework
               <SiReact />
               <SiVuedotjs />
-              <SiRedux />
+              {/* <SiRedux /> */}
             </SubTitle>
             {skills.Framework.map((e) => (
               <ItemWrapper key={e.name}>

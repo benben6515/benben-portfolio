@@ -45,12 +45,11 @@ export const benben = {
   ],
   education: [
     {
-      name: 'Lidemy 程式導師計畫 - 第五期',
+      name: 'Lidemy 程式導師計畫 - 第五期學員',
       time: '2021.04 ~ 2021.10',
       description: `
-- 跟前端大師學習，半年時間全職衝刺
-- 完整前、後端學習計劃
-- 唯一 180 天無間斷繳交學習進度
+- 半年時間全職衝刺，完整前、後端學習計劃
+- 唯一 180 天無間斷繳交學習進度的學員
 - 深度學習同時廣度學習，期間還持繼自學，如：CS50、Udemy
 `,
     },
@@ -59,7 +58,6 @@ export const benben = {
       time: '2013.09 ~ 2018.06',
       description: `
 - 大一獲得「新生教育獎」數學滿級分
-- 大二開始半工半讀人生
 - 大三擔任熱音社 - 攝影長
 `,
     },
@@ -67,12 +65,8 @@ export const benben = {
   skills: {
     HTMLandCSS: [
       {
-        name: 'CSS 選取器',
+        name: 'CSS 選取器 & 排版',
         description: '熟悉 HTML 建置與 CSS 選取器，並了解 BEM 命名法',
-      },
-      {
-        name: 'CSS 排版',
-        description: '理解排版流程 Float, Flex, Grid',
       },
       {
         name: 'SCSS/SASS',
@@ -80,7 +74,7 @@ export const benben = {
       },
       {
         name: 'UI library',
-        description: '理解 Bootstrap, tailwind 等 Library 的原理',
+        description: '理解 Bootstrap, Tailwind 等 Library 的原理',
       },
       {
         name: 'CSS in JavaScript',
@@ -97,16 +91,12 @@ export const benben = {
         description: '熟悉原生 ES6 的 JavaScript 語法',
       },
       {
-        name: 'API 串接',
-        description: '使用 Fetch, async/await, axios 等技術，與 Web 後端溝通',
+        name: '演算法、資料結構',
+        description: '理解基礎的演算法與資料結構，並能應用在工作上',
       },
       {
-        name: '基礎演算法、資料結構',
-        description: '理解基礎的演算法與資料結構',
-      },
-      {
-        name: 'JavaScript 觀念',
-        description: '了解基礎觀念，如：this, closure, scope, prototype 等',
+        name: 'JavaScript 進階觀念',
+        description: '了解進階觀念，如：this, closure, scope, prototype 等',
       },
     ],
     Framework: [
@@ -118,23 +108,15 @@ export const benben = {
         name: 'Vue',
         description: '熟悉 Vue, Vue3 composition API 帶來的優勢',
       },
-      {
-        name: 'Redux/Vuex',
-        description: '使用 Redux/Vuex 來管理 react/vue 中的狀態，並利用 Redux toolkit 來優化 Redux 專案',
-      },
     ],
     BackEnd: [
       {
-        name: '後端 Framework',
+        name: '後端 Framework(Node.js)',
         description: '能夠使用 Node.js, Express 建立 Restful API server',
       },
       {
         name: 'Deploy 部署',
         description: '在 AWS EC2, Netify, Heroku 等平台部署網站讓使用者看見',
-      },
-      {
-        name: 'Nginx, PM2',
-        description: '利用 Nginx, PM2 工具來達成反向代理與管理網站',
       },
     ],
 
@@ -145,15 +127,11 @@ export const benben = {
       },
       {
         name: '基礎 SQL query',
-        description: '了解基本 CRUD 的 SQL query 語法',
+        description: '基本 CRUD 的 SQL query 語法',
       },
       {
         name: 'SQL injection / XSS',
         description: '理解常見資安相關議題，並懂得如何在實作上防範',
-      },
-      {
-        name: 'Sequelize ORM',
-        description: '利用 Sequelize ORM 的模型去操作資料庫',
       },
     ],
 
@@ -163,39 +141,49 @@ export const benben = {
         description: '熟悉基礎用法，以及 rebase, cherry-pick 等',
       },
       {
-        name: 'IDE',
-        description: '日常開發環境為 VScode 並搭配 Vim 插件，加速編寫效率',
-      },
-      {
-        name: '套件管理工具',
-        description: '利用 npm, yarn, pnpm 來管理 libraries',
-      },
-      {
-        name: 'Bundler',
-        description: '使用 webpack, vite 打包工具，提升開發速度',
+        name: 'IDE (NeoVim/Vim)',
+        description: '日常開發環境為 NeoVim (LazyVim)，加速編寫效率',
       },
     ],
   },
   projects: [
+    // {
+    //   name: 'Z-axis',
+    //   demo: 'https://zaxis.netlify.app/#/',
+    //   repo: 'https://github.com/angelina524/final-project-Z-axis-frontend/tree/dev',
+    //   image: '/images/projects/large-project-1.gif',
+    //   youtube: 'https://youtu.be/-sDzeKgKeGw',
+    //   record: 'https://hackmd.io/@benben6515/H1-rEQb8_',
+    //   details: [
+    //     {
+    //       name: '專案簡介',
+    //       description: '在 Lidemy 學習時的多人協作 Final Project，我主要負責了首頁視覺元素切板、前後端 Socket.io 整合、後端 AWS EC2 部署。',
+    //     },
+    //     {
+    //       name: '前端開發',
+    //       description: '採用 React、Socket.IO 開發，並部署在 Netlify。',
+    //     },
+    //     {
+    //       name: '後端開發',
+    //       description: '採用 Express、Sequelize、Socket.IO 開發，部署在 AWS EC2 平台，並使用 AWS RDS - MySQL 資料庫。',
+    //     },
+    //   ],
+    // },
+    //
     {
-      name: 'Z-axis',
-      demo: 'https://zaxis.netlify.app/#/',
-      repo: 'https://github.com/angelina524/final-project-Z-axis-frontend/tree/dev',
-      image: '/images/projects/large-project-1.gif',
-      youtube: 'https://youtu.be/-sDzeKgKeGw',
-      record: 'https://hackmd.io/@benben6515/H1-rEQb8_',
+      name: 'Classcipe',
+      demo: 'https://classcipe.com/v2/',
+      repo: 'https://classcipe.com/v2/',
+      image: '/images/projects/large-project-4.gif',
+      youtube: 'https://www.youtube.com/@classcipe',
       details: [
         {
           name: '專案簡介',
-          description: '在 Lidemy 學習時的多人協作 Final Project，我主要負責了首頁視覺元素切板、前後端 Socket.io 整合、後端 AWS EC2 部署。',
+          description: '公司位於紐西蘭，遠端工作團隊，從 0 到 1 打造的教育科技產品，我主要負責了前端部分。',
         },
         {
-          name: '前端開發',
-          description: '採用 React、Socket.IO 開發，並部署在 Netlify。',
-        },
-        {
-          name: '後端開發',
-          description: '採用 Express、Sequelize、Socket.IO 開發，部署在 AWS EC2 平台，並使用 AWS RDS - MySQL 資料庫。',
+          name: '遇到的困難',
+          description: '當時碰到資料結構與業務造成的效能瓶頸，與後端人員、老闆討論可行的方案，最終解決了。',
         },
       ],
     },

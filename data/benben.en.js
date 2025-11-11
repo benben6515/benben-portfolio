@@ -45,11 +45,10 @@ export const benben = {
   ],
   education: [
     {
-      name: 'Lidemy - Trainer',
+      name: 'Lidemy - Trainee',
       time: '2021.04 ~ 2021.10',
       description: `
-- Learn from front-end masters and sprint full-time in half a year
-- Complete front-end and back-end learning plan
+- Sprint full-time in half a year, complete front-end and back-end learning plan
 - The only 180-day uninterrupted payment of learning progress
 - Deep learning and breadth learning at the same time, and continuous self-study during this period, such as: CS50, Udemy
 `,
@@ -59,7 +58,6 @@ export const benben = {
       time: '2013.09 ~ 2018.06',
       description: `
 - Received the "Freshman Education Award" as a freshman by got full score in Math
-- Started a part-time work-study life in my sophomore year
 - In junior year, served as chief photographer of Hot music Club
 `,
     },
@@ -67,12 +65,8 @@ export const benben = {
   skills: {
     HTMLandCSS: [
       {
-        name: 'CSS Selector',
+        name: 'CSS Selector & Layout',
         description: 'familiar with HTML, CSS Selector. well knowing BEM naming',
-      },
-      {
-        name: 'CSS Layout',
-        description: 'well knowing layout attribute i.e. Float, Flex, Grid',
       },
       {
         name: 'SCSS/SASS',
@@ -97,10 +91,6 @@ export const benben = {
         description: 'familiar with native ES6 JavaScript syntax',
       },
       {
-        name: 'RESTful API',
-        description: 'using Fetch, async/await, axios to communicate with Back-End',
-      },
-      {
         name: 'Basic Algorithm/Data Structure',
         description: 'knowing algorithm / data Structure and keep learning',
       },
@@ -118,10 +108,6 @@ export const benben = {
         name: 'Vue',
         description: 'familiar with Vue ecosystem, and composition API',
       },
-      {
-        name: 'Redux/Vuex',
-        description: 'use Redux/Vuex to manage states, and use Redux toolkit / Pinia',
-      },
     ],
     BackEnd: [
       {
@@ -131,10 +117,6 @@ export const benben = {
       {
         name: 'Deploy',
         description: 'deploy on AWS EC2, Netify, Heroku .etc platform',
-      },
-      {
-        name: 'Nginx, PM2',
-        description: 'take advantage of Nginx, PM2 to handle proxy http request',
       },
     ],
 
@@ -151,10 +133,6 @@ export const benben = {
         name: 'SQL injection, XSS ...',
         description: 'knowing the common information security, and prevent them',
       },
-      {
-        name: 'Sequelize ORM',
-        description: 'take advantage of Sequelize ORM to operate database',
-      },
     ],
 
     other: [
@@ -163,40 +141,50 @@ export const benben = {
         description: 'knowing common usage, includes rebase, cherry-pick .etc',
       },
       {
-        name: 'IDE',
-        description: "daily IED is VScode with 'Vim' plugin which boost productivity",
-      },
-      {
-        name: 'Package Management',
-        description: 'use npm, yarn, pnpm to manage libraries',
-      },
-      {
-        name: 'Bundler',
-        description: 'use webpack, vite to bundle project',
+        name: 'IDE (NeoVim/Vim)',
+        description: 'daily IED is NeoVim(LazyVim) which boost productivity',
       },
     ],
   },
   projects: [
+    // {
+    //   name: 'Z-axis',
+    //   demo: 'https://zaxis.netlify.app/#/',
+    //   repo: 'https://github.com/angelina524/final-project-Z-axis-frontend/tree/dev',
+    //   image: '/images/projects/large-project-1.gif',
+    //   youtube: 'https://youtu.be/-sDzeKgKeGw',
+    //   record: 'https://hackmd.io/@benben6515/H1-rEQb8_',
+    //   details: [
+    //     {
+    //       name: 'Project brief',
+    //       description:
+    //         'The Final Project In Lidemy bootcamp. I was in charge of layout, integrating Socket.io in both Front-end and Back-end, deployment on AWS EC2。',
+    //     },
+    //     {
+    //       name: 'Front-End',
+    //       description: 'Developed project with React, Socket.IO, and deployed on Netlify.',
+    //     },
+    //     {
+    //       name: 'Back-End',
+    //       description: 'Developed project with Express, Sequelize, Socket.IO, deployed on AWS EC2, and AWS RDS - MySQL database.',
+    //     },
+    //   ],
+    // },
     {
-      name: 'Z-axis',
-      demo: 'https://zaxis.netlify.app/#/',
-      repo: 'https://github.com/angelina524/final-project-Z-axis-frontend/tree/dev',
-      image: '/images/projects/large-project-1.gif',
-      youtube: 'https://youtu.be/-sDzeKgKeGw',
-      record: 'https://hackmd.io/@benben6515/H1-rEQb8_',
+      name: 'Classcipe',
+      demo: 'https://classcipe.com/v2/',
+      repo: 'https://classcipe.com/v2/',
+      image: '/images/projects/large-project-4.gif',
+      youtube: 'https://www.youtube.com/@classcipe',
       details: [
         {
-          name: 'Project brief',
+          name: 'Project Brief',
+          description: "The company is in New Zealand, and the team is fully remote. I primarily build the whole website's front-end part from 0 to 1.",
+        },
+        {
+          name: 'The biggest challenge',
           description:
-            'The Final Project In Lidemy bootcamp. I was in charge of layout, integrating Socket.io in both Front-end and Back-end, deployment on AWS EC2。',
-        },
-        {
-          name: 'Front-End',
-          description: 'Developed project with React, Socket.IO, and deployed on Netlify.',
-        },
-        {
-          name: 'Back-End',
-          description: 'Developed project with Express, Sequelize, Socket.IO, deployed on AWS EC2, and AWS RDS - MySQL database.',
+            'We encountered a performance bottleneck caused by data structure and business logic. We discussed solutions with backend staff and the boss, and finally solved the problem.',
         },
       ],
     },

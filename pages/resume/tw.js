@@ -290,7 +290,7 @@ const Profile = ({ data }) => {
               Framework
               <SiReact />
               <SiVuedotjs />
-              <SiRedux />
+              {/* <SiRedux /> */}
             </SubTitle>
             {skills.Framework.map((e) => (
               <ItemWrapper key={e.name}>
