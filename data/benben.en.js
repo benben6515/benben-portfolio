@@ -7,7 +7,7 @@ export const benben = {
   github: 'https://github.com/benben6515',
   blog: 'https://benben6515.github.io/blog/',
   about:
-    "Hi, I'm a Front-End developer from Taiwan. I like to learn various Web developing skills with hand-on both React and Vue experience. Usually, I'm a workaholic, but I like reading book and writing blog at my rest time, and coding of courses.",
+    "Hi, I'm a front-end developer from Taiwan. I like to learn various web development skills with hands-on experience in both React and Vue. Usually, I'm a workaholic, but I enjoy reading books and writing blogs in my free time, as well as coding, of course.",
   experience: [
     {
       name: 'Classcipe - Front-End',
