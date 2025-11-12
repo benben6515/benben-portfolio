@@ -120,6 +120,14 @@ const SectionItem = styled.div`
   }
 `
 
+const SectionWideItem = styled.div`
+  width: 440px;
+  margin-left: 1rem;
+  @media print {
+    margin-left: 0rem;
+  }
+`
+
 const InformationWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -170,10 +178,19 @@ const ItemDescription = styled.p`
   color: #444;
 `
 
+const ExperienceDescription = styled.p`
+  font-size: 0.85rem;
+  white-space: pre-line;
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
+  color: #222;
+`
+
 const ProjectWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  width: 100%;
   img {
     width: clamp(300px, 70%, 500px);
     object-fit: contain;
@@ -387,27 +404,27 @@ const Profile = ({ data }) => {
         <Title>Education/Experience</Title>
 
         <Section>
-          <SectionItem>
+          <SectionWideItem>
             <SubTitle>Experience</SubTitle>
             {data.experience.map((e) => (
               <ItemWrapper key={e.name}>
                 <ItemName>{e.name}</ItemName>
                 <ItemDescription>{e.time}</ItemDescription>
-                <ItemDescription>{e.description}</ItemDescription>
+                <ExperienceDescription>{e.description}</ExperienceDescription>
               </ItemWrapper>
             ))}
-          </SectionItem>
+          </SectionWideItem>
 
-          <SectionItem>
+          <SectionWideItem>
             <SubTitle>Education</SubTitle>
             {data.education.map((e) => (
               <ItemWrapper key={e.name}>
                 <ItemName>{e.name}</ItemName>
                 <ItemDescription>{e.time}</ItemDescription>
-                <ItemDescription>{e.description}</ItemDescription>
+                <ExperienceDescription>{e.description}</ExperienceDescription>
               </ItemWrapper>
             ))}
-          </SectionItem>
+          </SectionWideItem>
         </Section>
 
         <Title>References</Title>

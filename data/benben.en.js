@@ -10,19 +10,19 @@ export const benben = {
     "Hi, I'm a front-end developer from Taiwan. I like to learn various web development skills with hands-on experience in both React and Vue. Usually, I'm a workaholic, but I enjoy reading books and writing blogs in my free time, as well as coding, of course.",
   experience: [
     {
-      name: 'Classcipe - Front-End',
-      time: '2023.02 ~ 2025.08',
+      name: 'Classcipe - Front-End team lead',
+      time: '2023.02 ~ 2025.08 (2.5 years)',
       description: `
-- Lead 2 to 3 front-end developers
-- Start from scratch to build up projects
-- Unify the coding style of front-end projects
-- Refactor projects from Vue 2 to Vue 3
-- Optimize pages with many components, speeding up loading time by 300%
+- Developed an educational technology product from scratch, collaborating with Indian IB-certified teachers/business professionals.
+- After approximately one year, promoted to Front-end Team Leader, leading 2-3 front-end colleagues.
+- Planned Responsive APIs and data models with the back-end team to meet business needs.
+- New projects adopted Vue 3, while some older projects used Vue 2, and the older projects were refactored when time allowed.
+- Optimized pages using a large number of components, improving loading speed by 300%. For example, addressing loading/lag issues caused by a large number of components requiring drag-and-drop sorting.
 `,
     },
     {
       name: 'Red Envelope - Front-End',
-      time: '2021.02 ~ 2023.02',
+      time: '2021.02 ~ 2023.02 (1 year)',
       description: `
 - Respond to all front-end related business
 - Actively share knowledge, such as: TypeScript, Vim
@@ -33,7 +33,7 @@ export const benben = {
     },
     {
       name: 'King-One Design - Front-End',
-      time: '2021.11 ~ 2022.02',
+      time: '2021.11 ~ 2022.02 (3 months)',
       description: `
 - Start from scratch to build projects using Vue
 - Bring over one million for the company by completing projects independently (boost 10% of annual turnover)
@@ -46,7 +46,7 @@ export const benben = {
   education: [
     {
       name: 'Lidemy - Trainee',
-      time: '2021.04 ~ 2021.10',
+      time: '2021.04 ~ 2021.10 (6 months)',
       description: `
 - Sprint full-time in half a year, complete front-end and back-end learning plan
 - The only 180-day uninterrupted payment of learning progress
