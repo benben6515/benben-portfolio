@@ -54,7 +54,7 @@ export const benben = {
 `,
     },
     {
-      name: 'Chung Yang University - Applied Math.',
+      name: 'Chung Yuan Christian University - Applied Math.',
       time: '2013.09 ~ 2018.06',
       description: `
 - Received the "Freshman Education Award" as a freshman by got full score in Math
