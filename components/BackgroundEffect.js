@@ -6,7 +6,7 @@ const RandomBubbles = () => {
   const [randomArray, setRandomArray] = useState([])
 
   useEffect(() => {
-    setRandomArray(Array(40).fill(null))
+    setRandomArray(Array(50).fill(null))
   }, [])
 
   return randomArray.map((e, i) => {

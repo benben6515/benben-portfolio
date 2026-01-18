@@ -35,6 +35,8 @@ const float = keyframes`
 
 export const BackgroundContainer = styled.div`
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -44,6 +46,7 @@ export const BackgroundContainer = styled.div`
 export const Bubbles = styled.div`
   position: relative;
   display: flex;
+  justify-content: center;
 `
 
 export const Bubble = styled.span`

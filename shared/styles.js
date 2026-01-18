@@ -141,6 +141,7 @@ export const Wrapper = styled.div`
 export const SectionWrapper = styled.div`
   display: grid;
   place-items: center center;
+  place-content: center;
   min-height: calc(100vh - 2rem);
   gap: 1rem;
   margin-top: 1rem;
@@ -324,7 +325,7 @@ export const Button = styled.div`
 export const AboutMe = styled.div`
   display: flex;
   flex-direction: column;
-  width: clamp(300px, 80%, 500px);
+  width: clamp(20rem, 80%, 60rem);
   color: rgba(255, 255, 255, 0.8);
   margin: 2rem auto 3rem;
   gap: 1rem;
