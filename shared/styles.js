@@ -8,13 +8,27 @@ injectGlobal`
     font-family: 'Reenie Beanie';
     src: url(${font}) format('truetype');
   }
+  @font-face {
+    font-family: 'FiraCode Nerd Font';
+    src: url('/fonts/FiraCode/FiraCodeNerdFont-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'FiraCode Nerd Font';
+    src: url('/fonts/FiraCode/FiraCodeNerdFont-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
   * {
     margin: 0;
     padding: 0;
   }
   body {
-    font-family: '微軟正黑體';
-    background: url('https://images.unsplash.com/photo-1626958390898-162d3577f293?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+    font-family: 'FiraCode Nerd Font', '微軟正黑體';
+    background: url('/assets/bg.jpg');
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
@@ -119,9 +133,13 @@ export const StyledNavbar = styled.nav`
 
 // footer
 export const FooterWrapper = styled.footer`
+  display: flex;
+  align-items: center;
   position: relative;
   bottom: 0;
-  color: #eee;
+  margin-bottom: 0.5rem;
+  color: #111;
+  text-shadow: #fff 1px 0 10px;
 `
 
 // index

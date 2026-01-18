@@ -6,7 +6,7 @@ function Footer() {
   return (
     <FooterWrapper>
       <div>
-        made by <a href="https://github.com/benben6515">benben</a> &copy; {year}, background/Unsplash
+        made by <a href="https://github.com/benben6515">benben</a> &copy; {year}
       </div>
     </FooterWrapper>
   )

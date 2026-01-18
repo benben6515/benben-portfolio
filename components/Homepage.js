@@ -1,12 +1,54 @@
+import { useState } from 'react'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
+import styled from '@emotion/styled'
 import MyHead from './MyHead'
 
-import { SectionWrapper, HomepageTitle, HomepageTitleTyping, Card, CardInfo, ButtonWrapper, Button, AboutMe } from '../shared/styles'
+import { SectionWrapper, HomepageTitle, Card, CardInfo, ButtonWrapper, Button, AboutMe } from '../shared/styles'
+import TypingEffect from './TypingEffect'
 import { BsTelephone, BsGithub } from 'react-icons/bs'
-import { AiOutlineMail } from 'react-icons/ai'
+import { AiOutlineMail, AiOutlineCopy } from 'react-icons/ai'
+import { copyToBoard } from '../helper'
+import { BASE_URL } from '../config'
 
 const BackgroundEffect = dynamic(() => import('./BackgroundEffect'))
+
+const QrSection = styled.div`
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+`
+
+const QrInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  h4 {
+    color: #7d7;
+    font-size: 1.1rem;
+  }
+`
+
+const CopyButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid #7d7;
+  color: #7d7;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: 0.3s;
+  &:hover {
+    background: #7d7;
+    color: #fff;
+  }
+`
 
 const content = {
   en: {
@@ -16,7 +58,7 @@ const content = {
     blogBtn: '👉 Check my Blog',
     qrCode: '/images/qr-code.png',
     aboutTitle: 'About me',
-    hashtags: '#Front-End🧙🏼 #Vim⚡ #Reading📚',
+    hashtags: '#Front-End🧙🏼 #Vim💫 #Reading📚',
     aboutParagraphs: [
       'A passionate, continuously learning Front-End developer who was born in 1995. I love sharing technology and appreciate open-source culture. I have hands-on experience with two Front-End frameworks (React/Vue). I look forward to developing awesome products.',
     ],
@@ -28,6 +70,9 @@ const content = {
     closing:
       'There are so many front-end developers, but very few are outstanding. If you think I am the candidate you are looking for, feel free to contact me.',
     ps: 'ps. If you meet a developer with Vim, consider hire this guy!',
+    qrTip: 'Scan QR code to view on mobile',
+    copyLink: 'Copy link',
+    copied: 'Copied!',
   },
   tw: {
     resumeLink: '/resume/tw',
@@ -36,7 +81,7 @@ const content = {
     blogBtn: '👉 查看部落格',
     qrCode: 'https://i.imgur.com/jYTOeTV.png',
     aboutTitle: 'About（關於我）',
-    hashtags: '#前端🧙🏼 #Vim⚡ #閱讀📚',
+    hashtags: '#前端🧙🏼 #Vim💫 #閱讀📚',
     aboutParagraphs: [
       '1995 年生，是一位有熱情、不斷學習新技術、樂於分享的開發者，喜歡 Open source 文化，目前擁有前端框架（React/Vue）技術，期望能開發出讓人驚豔的作品。',
       '擁有 4+ 年的開發經驗，主要專注在前端的領域，但後端也會一些基本，並能善用 AI 提升產能，取得開發進度與品質的平衡。',
@@ -53,11 +98,22 @@ const content = {
     ],
     closing: '如果覺得我是您需要的人才，迎歡隨時與我聊聊。',
     ps: 'ps. 如果您遇到了 Vim 的使用者，快把他招入團隊吧！',
+    qrTip: '掃瞄 QRcode 在手機上查看',
+    copyLink: '複製連結',
+    copied: '已複製！',
   },
 }
 
 function Homepage({ data, lang = 'en' }) {
   const t = content[lang]
+  const [copied, setCopied] = useState(false)
+
+  const handleCopy = () => {
+    copyToBoard(BASE_URL).then(() => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    })
+  }
 
   return (
     <>
@@ -69,7 +125,7 @@ function Homepage({ data, lang = 'en' }) {
         <HomepageTitle>
           Hi, I'm <span>Benben.</span>
         </HomepageTitle>
-        <HomepageTitleTyping>A Front-End developer.</HomepageTitleTyping>
+        <TypingEffect />
         <Card>
           <img className="img" src={data.avatar} />
           <CardInfo>
@@ -111,7 +167,16 @@ function Homepage({ data, lang = 'en' }) {
       </SectionWrapper>
 
       <AboutMe>
-        <img src={t.qrCode} width={150} alt="qrCode" />
+        <QrSection>
+          <img src={t.qrCode} width={150} alt="qrCode" />
+          <QrInfo>
+            <h4>{t.qrTip}</h4>
+            <CopyButton onClick={handleCopy}>
+              <AiOutlineCopy />
+              {copied ? t.copied : t.copyLink}
+            </CopyButton>
+          </QrInfo>
+        </QrSection>
         <h3>{t.aboutTitle}</h3>
         <h3>{t.hashtags}</h3>
         <br />
