@@ -6,6 +6,7 @@ import MyHead from './MyHead'
 
 import { SectionWrapper, HomepageTitle, Card, CardInfo, ButtonWrapper, Button, AboutMe } from '../shared/styles'
 import TypingEffect from './TypingEffect'
+import SkillWall from './SkillWall'
 import { BsTelephone, BsGithub } from 'react-icons/bs'
 import { AiOutlineMail, AiOutlineCopy } from 'react-icons/ai'
 import { copyToBoard } from '../helper'
@@ -192,6 +193,8 @@ function Homepage({ data, lang = 'en' }) {
         <br />
         <p>{t.ps}</p>
       </AboutMe>
+
+      <SkillWall />
     </>
   )
 }

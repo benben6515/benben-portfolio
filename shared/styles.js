@@ -32,6 +32,7 @@ injectGlobal`
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
+    overflow-x: hidden;
   }
   a {
     text-decoration: none;
