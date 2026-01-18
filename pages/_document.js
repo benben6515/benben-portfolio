@@ -20,7 +20,7 @@ export default class AppDocument extends Document {
 
   render() {
     return (
-      <Html lang="zh-Hand-TW">
+      <Html lang="zh-Hant-TW">
         <Head />
         <body>
           <Main />

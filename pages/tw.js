@@ -85,7 +85,7 @@ export default function Home({ data }) {
   )
 }
 
-import { benben } from '../data/benben.en'
+import { benben } from '../data/benben.tw'
 export const getStaticProps = async () => {
   return {
     props: {

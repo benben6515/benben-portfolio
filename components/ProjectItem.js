@@ -4,7 +4,7 @@ import { StyledProjectItem } from '../shared/styles'
 
 function ProjectItem({ project }) {
   return (
-    <Link href="/projects/[id]" as={`/projects/${project.id}`}>
+    <Link href={`/projects/${project.id}`}>
       <StyledProjectItem>
         <h3>{project.title} &rarr;</h3>
         <p>{project.description}</p>
