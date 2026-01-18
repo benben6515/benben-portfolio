@@ -2,21 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import Link from 'next/link'
 import MyHead from '../../components/MyHead'
-import {
-  SiJavascript,
-  SiTypescript,
-  SiCss3,
-  SiHtml5,
-  SiReact,
-  SiVuedotjs,
-  SiRedux,
-  SiNodedotjs,
-  SiNetlify,
-  SiMysql,
-  SiSequelize,
-  SiVim,
-  SiGit,
-} from 'react-icons/si'
+import { SiJavascript, SiTypescript, SiCss3, SiHtml5, SiReact, SiVuedotjs, SiNodedotjs, SiNetlify, SiMysql, SiSequelize, SiVim, SiGit } from 'react-icons/si'
 import { BsTelephone, BsGithub } from 'react-icons/bs'
 import { AiOutlineMail, AiOutlineRollback, AiOutlineCopy, AiOutlinePrinter } from 'react-icons/ai'
 import { IoLanguageOutline } from 'react-icons/io5'
@@ -42,7 +28,7 @@ const ProfileWrapper = styled.main`
   background: #fff;
   width: clamp(300px, 70%, 960px);
   margin: 1rem auto 5rem;
-  border-radius: 0.2rem;
+  border-radius: 0.75rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   padding: 2rem;
   @media screen and (min-width: 750px) {
@@ -66,7 +52,7 @@ const IconWrapper = styled.section`
   }
 `
 
-const IconItem = styled.span`
+const IconItem = styled.a`
   width: 2.5rem;
   height: 2.5rem;
   display: grid;
@@ -83,6 +69,9 @@ const IconItem = styled.span`
   cursor: pointer;
   &:hover {
     filter: brightness(0.7);
+  }
+  &::after {
+    display: none;
   }
 `
 
@@ -219,29 +208,17 @@ const Profile = ({ data }) => {
       <MyHead title="Benben's Resume" />
 
       <IconWrapper>
-        <Link href="/">
-          <IconItem>
-            <span>
-              <AiOutlineRollback />
-            </span>
-          </IconItem>
-        </Link>
-        <IconItem>
-          <Link href="/resume/en">
-            <span>
-              <IoLanguageOutline />
-            </span>
-          </Link>
+        <IconItem as={Link} href="/">
+          <AiOutlineRollback />
         </IconItem>
-        <IconItem>
-          <a onClick={() => copyToBoard(`${BASE_URL}/resume`)}>
-            <AiOutlineCopy />
-          </a>
+        <IconItem as={Link} href="/resume/en">
+          <IoLanguageOutline />
         </IconItem>
-        <IconItem>
-          <a onClick={() => print()}>
-            <AiOutlinePrinter />
-          </a>
+        <IconItem onClick={() => copyToBoard(`${BASE_URL}/resume`)}>
+          <AiOutlineCopy />
+        </IconItem>
+        <IconItem onClick={() => print()}>
+          <AiOutlinePrinter />
         </IconItem>
       </IconWrapper>
 
@@ -307,7 +284,6 @@ const Profile = ({ data }) => {
               Framework
               <SiReact />
               <SiVuedotjs />
-              {/* <SiRedux /> */}
             </SubTitle>
             {skills.Framework.map((e) => (
               <ItemWrapper key={e.name}>
