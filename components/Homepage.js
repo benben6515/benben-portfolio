@@ -7,6 +7,7 @@ import MyHead from './MyHead'
 import { SectionWrapper, HomepageTitle, Card, CardInfo, ButtonWrapper, Button, AboutMe } from '../shared/styles'
 import TypingEffect from './TypingEffect'
 import SkillWall from './SkillWall'
+import Testimonials from './Testimonials'
 import { BsTelephone, BsGithub } from 'react-icons/bs'
 import { AiOutlineMail, AiOutlineCopy } from 'react-icons/ai'
 import { copyToBoard } from '../helper'
@@ -110,10 +111,14 @@ function Homepage({ data, lang = 'en' }) {
   const [copied, setCopied] = useState(false)
 
   const handleCopy = () => {
-    copyToBoard(BASE_URL).then(() => {
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
-    })
+    copyToBoard(BASE_URL)
+      .then(() => {
+        setCopied(true)
+        setTimeout(() => setCopied(false), 2000)
+      })
+      .catch((err) => {
+        console.error('Failed to copy:', err)
+      })
   }
 
   return (
@@ -193,6 +198,8 @@ function Homepage({ data, lang = 'en' }) {
         <br />
         <p>{t.ps}</p>
       </AboutMe>
+
+      <Testimonials lang={lang} />
 
       <SkillWall />
     </>
