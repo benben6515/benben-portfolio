@@ -8,7 +8,6 @@ import {
   SiNextdotjs,
   SiNodedotjs,
   SiHtml5,
-  SiCss3,
   SiTailwindcss,
   SiGit,
   SiGithub,
@@ -18,6 +17,7 @@ import {
   SiMongodb,
   SiGraphql,
 } from 'react-icons/si'
+import { FaCss3Alt } from 'react-icons/fa'
 
 const skills = [
   { icon: SiJavascript, name: 'JavaScript', color: '#F7DF1E' },
@@ -27,7 +27,7 @@ const skills = [
   { icon: SiNextdotjs, name: 'Next.js', color: '#fff' },
   { icon: SiNodedotjs, name: 'Node.js', color: '#339933' },
   { icon: SiHtml5, name: 'HTML5', color: '#E34F26' },
-  { icon: SiCss3, name: 'CSS3', color: '#1572B6' },
+  { icon: FaCss3Alt, name: 'CSS3', color: '#1572B6' },
   { icon: SiTailwindcss, name: 'Tailwind', color: '#06B6D4' },
   { icon: SiGit, name: 'Git', color: '#F05032' },
   { icon: SiGithub, name: 'GitHub', color: '#fff' },

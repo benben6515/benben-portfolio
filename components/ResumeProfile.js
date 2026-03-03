@@ -2,7 +2,8 @@ import React from 'react'
 import styled from '@emotion/styled'
 import Link from 'next/link'
 import MyHead from './MyHead'
-import { SiJavascript, SiTypescript, SiCss3, SiHtml5, SiReact, SiVuedotjs, SiNodedotjs, SiNetlify, SiMysql, SiSequelize, SiVim, SiGit } from 'react-icons/si'
+import { SiJavascript, SiTypescript, SiHtml5, SiReact, SiVuedotjs, SiNodedotjs, SiNetlify, SiMysql, SiSequelize, SiVim, SiGit } from 'react-icons/si'
+import { FaCss3Alt } from 'react-icons/fa'
 import { BsTelephone, BsGithub } from 'react-icons/bs'
 import { AiOutlineMail, AiOutlineRollback, AiOutlineCopy, AiOutlinePrinter } from 'react-icons/ai'
 import { IoLanguageOutline } from 'react-icons/io5'
@@ -21,17 +22,41 @@ const labels = {
     personalBlogDesc: 'Record some note, reading experience .etc.',
     collabBlog: 'Collaborative blog',
     collabBlogDesc: 'Collaborative blog with Lidemy classmates.',
+    backToHome: 'Back to Home',
+    toggleLang: 'Toggle Language (切換語言)',
+    copyLink: 'Copy Link',
+    printResume: 'Print Resume',
   },
   tw: {
-    skills: <>Skills<span>（技能）</span></>,
-    projects: <>Projects<span>（專案）</span></>,
-    experience: <>Education/Experience<span>（學經歷）</span></>,
-    references: <>References<span>（其他參考）</span></>,
+    skills: (
+      <>
+        Skills<span>（技能）</span>
+      </>
+    ),
+    projects: (
+      <>
+        Projects<span>（專案）</span>
+      </>
+    ),
+    experience: (
+      <>
+        Education/Experience<span>（學經歷）</span>
+      </>
+    ),
+    references: (
+      <>
+        References<span>（其他參考）</span>
+      </>
+    ),
     blogs: '部落格',
     personalBlog: '個人部落格',
     personalBlogDesc: '記錄一些程式筆記、讀書心得的地方。',
     collabBlog: '共筆技術部落格',
     collabBlogDesc: '跟 Lidemy 學長姐們一起寫的共筆部落格。',
+    backToHome: '返回首頁',
+    toggleLang: 'Toggle Language (切換語言)',
+    copyLink: '複製連結',
+    printResume: '列印履歷',
   },
 }
 
@@ -78,6 +103,7 @@ const IconWrapper = styled.section`
 `
 
 const IconItem = styled.a`
+  position: relative;
   width: 2.5rem;
   height: 2.5rem;
   display: grid;
@@ -95,8 +121,25 @@ const IconItem = styled.a`
   &:hover {
     filter: brightness(0.7);
   }
-  &::after {
-    display: none;
+  &::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(34, 34, 34, 0.9);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    line-height: normal;
+  }
+  &:hover::before {
+    opacity: 1;
   }
 `
 
@@ -237,16 +280,16 @@ function ResumeProfile({ data, lang = 'en' }) {
       <MyHead title="Benben's Resume" />
 
       <IconWrapper>
-        <IconItem as={Link} href="/">
+        <IconItem as={Link} href="/" data-tooltip={t.backToHome}>
           <AiOutlineRollback />
         </IconItem>
-        <IconItem as={Link} href={toggleLangHref}>
+        <IconItem as={Link} href={toggleLangHref} data-tooltip={t.toggleLang}>
           <IoLanguageOutline />
         </IconItem>
-        <IconItem onClick={() => copyToBoard(`${BASE_URL}/resume`)}>
+        <IconItem onClick={() => copyToBoard(`${BASE_URL}/resume`)} data-tooltip={t.copyLink}>
           <AiOutlineCopy />
         </IconItem>
-        <IconItem onClick={() => print()}>
+        <IconItem onClick={() => print()} data-tooltip={t.printResume}>
           <AiOutlinePrinter />
         </IconItem>
       </IconWrapper>
@@ -281,7 +324,7 @@ function ResumeProfile({ data, lang = 'en' }) {
           <SectionItem>
             <SubTitle>
               HTML/CSS
-              <SiCss3 />
+              <FaCss3Alt />
               <SiHtml5 />
             </SubTitle>
             {skills.HTMLandCSS.map((e) => (
