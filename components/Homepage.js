@@ -9,6 +9,7 @@ import TypingEffect from './TypingEffect'
 import SkillWall from './SkillWall'
 import Testimonials from './Testimonials'
 import { BsTelephone, BsGithub } from 'react-icons/bs'
+import Chatbot from './Chatbot'
 import { AiOutlineMail, AiOutlineCopy } from 'react-icons/ai'
 import { copyToBoard } from '../helper'
 import { BASE_URL } from '../config'
@@ -96,7 +97,7 @@ const content = {
     goals: [
       '短期目標：熱悉 Vim 與嘸蝦米的使用，這些都是能夠跟使用者一同成長的技能，工欲善其事，必先利其器，目前也是使用 VScode 搭配 Vim 插件做為開發主要工具。',
       '中長目標：在 2 ~ 3 年內達到資深前端工程師的程度，前端是易學難精的職業，但仍然繼續前進中，正在成為資深前端的路上。（目前自認為在這個階段中）',
-      '期長目標：成為獨角獸（Unicorn）開發者，不只局限於資深前端工程師，包含後端、設計等等。',
+      '長期目標：成為獨角獸（Unicorn）開發者，不只局限於資深前端工程師，包含後端、設計等等。',
     ],
     closing: '如果覺得我是您需要的人才，迎歡隨時與我聊聊。',
     ps: 'ps. 如果您遇到了 Vim 的使用者，快把他招入團隊吧！',
@@ -170,6 +171,8 @@ function Homepage({ data, lang = 'en' }) {
             </Link>
           </Button>
         </ButtonWrapper>
+
+        <Chatbot lang={lang} />
       </SectionWrapper>
 
       <AboutMe>
