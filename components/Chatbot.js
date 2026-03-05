@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from 'react'
 import styled from '@emotion/styled'
 import { keyframes } from '@emotion/css'
 import { BsTerminal, BsX, BsDash } from 'react-icons/bs'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import { copyToBoard } from '../helper'
 import { BASE_URL } from '../config'
 import { benben as benbenEn } from '../data/benben.en'
@@ -199,6 +201,128 @@ export const TerminalMessage = styled.div`
   }
 `
 
+// Markdown content wrapper for assistant messages
+export const MarkdownContent = styled.div`
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.82rem;
+  line-height: 1.6;
+
+  p {
+    margin: 0.3rem 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0.5rem 0 0.3rem;
+    color: #aef;
+    font-weight: 600;
+  }
+
+  h1 { font-size: 1.1rem; }
+  h2 { font-size: 1rem; }
+  h3 { font-size: 0.95rem; }
+  h4, h5, h6 { font-size: 0.9rem; }
+
+  ul, ol {
+    margin: 0.3rem 0;
+    padding-left: 1.2rem;
+  }
+
+  li {
+    margin: 0.15rem 0;
+  }
+
+  code {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.2rem;
+    font-family: 'FiraCode Nerd Font', monospace;
+    font-size: 0.8rem;
+    color: #7d7;
+  }
+
+  pre {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 0.6rem;
+    border-radius: 0.4rem;
+    margin: 0.4rem 0;
+    overflow-x: auto;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    &::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(74, 204, 204, 0.3);
+      border-radius: 2px;
+    }
+  }
+
+  pre code {
+    background: transparent;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  a {
+    color: #4ac;
+    text-decoration: none;
+    border-bottom: 1px dotted #4ac;
+    transition: all 0.2s;
+
+    &:hover {
+      color: #7d7;
+      border-bottom-color: #7d7;
+    }
+  }
+
+  blockquote {
+    margin: 0.4rem 0;
+    padding-left: 0.8rem;
+    border-left: 2px solid #4ac;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0.4rem 0;
+    font-size: 0.8rem;
+  }
+
+  th, td {
+    padding: 0.4rem 0.6rem;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  th {
+    background: rgba(74, 204, 204, 0.15);
+    color: #aef;
+    font-weight: 600;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0.6rem 0;
+  }
+
+  strong {
+    color: #aef;
+    font-weight: 600;
+  }
+
+  em {
+    color: rgba(255, 255, 255, 0.8);
+  }
+`
+
 // Typing indicator - subtle
 export const TerminalTyping = styled.div`
   display: flex;
@@ -381,11 +505,11 @@ const useCommandHandlers = (lang, t, setMessages, setConversationHistory) => {
   }
 
   const handleLs = () => {
-    let output = `${t.commandList}\n\n`
+    let output = `**${t.commandList}**\n\n`
     Object.entries(t.commands).forEach(([cmd, desc]) => {
-      output += `  /${cmd.padEnd(10)} - ${desc}\n`
+      output += `- \`/${cmd}\` - ${desc}\n`
     })
-    return { type: 'system', text: output.trim() }
+    return { type: 'assistant', text: output.trim() }
   }
 
   const handleCopy = async () => {
@@ -403,14 +527,14 @@ const useCommandHandlers = (lang, t, setMessages, setConversationHistory) => {
 
     Object.entries(benbenData.skills).forEach(([category, skills]) => {
       const categoryName = t.categoryNames[category] || category
-      output += `\n## ${categoryName}\n`
+      output += `**${categoryName}**\n\n`
       skills.forEach((skill) => {
-        output += `- ${skill.name}: ${skill.description}\n`
+        output += `- **${skill.name}**: ${skill.description}\n`
       })
       output += '\n'
     })
 
-    return { type: 'system', text: output.trim() }
+    return { type: 'assistant', text: output.trim() }
   }
 
   const handleResume = () => {
@@ -436,13 +560,15 @@ const useCommandHandlers = (lang, t, setMessages, setConversationHistory) => {
   }
 }
 
-function Chatbot({ lang = 'en' }) {
+function Chatbot({ lang = 'en', streamMode = true }) {
   const [isOpen, setIsOpen] = useState(true)
   const [isHistoryOpen, setIsHistoryOpen] = useState(true)
   const [messages, setMessages] = useState([])
   const [conversationHistory, setConversationHistory] = useState([])
   const [inputValue, setInputValue] = useState('')
   const [isLoading, setIsLoading] = useState(false)
+  const [isStreaming, setIsStreaming] = useState(false)
+  const streamingMessageRef = useRef(null)
   const messagesEndRef = useRef(null)
   const messagesContainerRef = useRef(null)
 
@@ -486,37 +612,159 @@ function Chatbot({ lang = 'en' }) {
     }
 
     // Regular chat message
-    setMessages((prev) => [...prev, { text: userMessage, type: 'user' }])
     setIsLoading(true)
 
-    try {
-      const response = await fetch('/api/chat', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          message: userMessage,
-          lang: lang,
-          history: conversationHistory,
-        }),
+    // Check if streaming mode is enabled
+    const shouldStream = streamMode
+
+    if (shouldStream) {
+      // Add user message and create placeholder for streaming assistant message
+      // Track the index where the assistant message will be
+      setMessages((prev) => {
+        const newIndex = prev.length + 1 // User message goes at prev.length, assistant at prev.length + 1
+        streamingMessageRef.current = newIndex
+        return [...prev, { text: userMessage, type: 'user' }, { text: '', type: 'assistant' }]
       })
+      // Don't set isStreaming yet - wait for first chunk to arrive to show loading dots
 
-      if (!response.ok) {
-        throw new Error('Failed to get response')
+      try {
+        const response = await fetch('/api/chat', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            message: userMessage,
+            lang: lang,
+            history: conversationHistory,
+            stream: true,
+          }),
+        })
+
+        if (!response.ok) {
+          console.error('Failed to get response')
+          // throw new Error('Failed to get response')
+        }
+
+        const reader = response.body.getReader()
+        const decoder = new TextDecoder()
+        let buffer = ''
+        let accumulatedContent = ''
+
+        while (true) {
+          const { done, value } = await reader.read()
+          if (done) break
+
+          buffer += decoder.decode(value, { stream: true })
+          const lines = buffer.split('\n')
+          buffer = lines.pop() || '' // Keep incomplete line in buffer
+
+          for (const line of lines) {
+            const trimmedLine = line.trim()
+            if (!trimmedLine || !trimmedLine.startsWith('data: ')) continue
+
+            const dataStr = trimmedLine.slice(6) // Remove 'data: ' prefix
+
+            // Check for [DONE] signal
+            if (dataStr === '[DONE]') {
+              continue
+            }
+
+            try {
+              const data = JSON.parse(dataStr)
+
+              // Handle error in stream
+              if (data.error) {
+                // throw new Error(data.error)
+                console.error(data.error)
+              }
+
+              const content = data.content
+              if (content) {
+                // Set streaming to true when first chunk arrives to hide loading dots
+                if (!isStreaming) {
+                  setIsStreaming(true)
+                }
+                accumulatedContent += content
+                const streamingIndex = streamingMessageRef.current
+                if (streamingIndex !== null) {
+                  setMessages((prev) => {
+                    const updated = [...prev]
+                    updated[streamingIndex] = { ...updated[streamingIndex], text: accumulatedContent }
+                    return updated
+                  })
+                }
+              }
+            } catch (parseError) {
+              if (parseError instanceof SyntaxError) {
+                console.error('Error parsing SSE data:', parseError, dataStr)
+              } else {
+                throw parseError
+              }
+            }
+          }
+        }
+
+        // Add complete message to conversation history
+        setConversationHistory((prev) => [
+          ...prev,
+          { role: 'user', content: userMessage },
+          { role: 'assistant', content: accumulatedContent },
+        ])
+      } catch (error) {
+        console.error('Chat streaming error:', error)
+        const streamingIndex = streamingMessageRef.current
+        if (streamingIndex !== null) {
+          setMessages((prev) => {
+            const updated = [...prev]
+            updated[streamingIndex] = { text: t.error, type: 'error' }
+            return updated
+          })
+        }
+      } finally {
+        setIsLoading(false)
+        setIsStreaming(false)
+        streamingMessageRef.current = null
       }
+    } else {
+      // Non-streaming mode (original behavior)
+      setMessages((prev) => [...prev, { text: userMessage, type: 'user' }])
 
-      const data = await response.json()
-      const assistantMessage = data.response
+      try {
+        const response = await fetch('/api/chat', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            message: userMessage,
+            lang: lang,
+            history: conversationHistory,
+            stream: false,
+          }),
+        })
 
-      setMessages((prev) => [...prev, { text: assistantMessage, type: 'assistant' }])
+        if (!response.ok) {
+          // throw new Error('Failed to get response')
+          console.error('Failed to get response')
+        }
 
-      setConversationHistory((prev) => [...prev, { role: 'user', content: userMessage }, { role: 'assistant', content: assistantMessage }])
-    } catch (error) {
-      console.error('Chat error:', error)
-      setMessages((prev) => [...prev, { text: t.error, type: 'error' }])
-    } finally {
-      setIsLoading(false)
+        const data = await response.json()
+        const assistantMessage = data.response
+
+        setMessages((prev) => [...prev, { text: assistantMessage, type: 'assistant' }])
+
+        setConversationHistory((prev) => [
+          ...prev,
+          { role: 'user', content: userMessage },
+          { role: 'assistant', content: assistantMessage },
+        ])
+      } catch (error) {
+        console.error('Chat error:', error)
+        setMessages((prev) => [...prev, { text: t.error, type: 'error' }])
+      } finally {
+        setIsLoading(false)
+      }
     }
   }
 
@@ -562,10 +810,18 @@ function Chatbot({ lang = 'en' }) {
       <TerminalHistory ref={messagesContainerRef} isCollapsed={!isHistoryOpen}>
         {messages.map((msg, index) => (
           <TerminalMessage key={index} className={msg.type}>
-            {msg.text}
+            {msg.type === 'assistant' ? (
+              <MarkdownContent>
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {msg.text}
+                </ReactMarkdown>
+              </MarkdownContent>
+            ) : (
+              msg.text
+            )}
           </TerminalMessage>
         ))}
-        {isLoading && (
+        {isLoading && !isStreaming && (
           <TerminalTyping>
             <span></span>
             <span></span>
